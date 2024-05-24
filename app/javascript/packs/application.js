@@ -15,8 +15,21 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 // app/javascript/packs/application.js
-import 'bootstrap';
-import "stylesheets/application"
+
+/*--------------------------------------------------------------
+# import lib
+--------------------------------------------------------------*/
 import $ from 'jquery';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
+
+/*--------------------------------------------------------------
+# import scss
+--------------------------------------------------------------*/
+import "stylesheets/application"
+import "stylesheets/Codltd"
+import "stylesheets/style"
+
 window.jQuery = $;
 window.$ = $;
