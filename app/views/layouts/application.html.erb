@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset='UTF-8'>
-  <title>My Rails App</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <!-- Reference the favicon.ico directly from the public directory -->
-  <%= favicon_link_tag asset_path('logo.png') %>
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-  <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
-<body>
-  <div class="Wrapper">
-    <%= render 'layouts/header' %>
-    <!-- Main Content Section -->
-    <main class="row">
-      <!-- Sidebar Section (3 columns) -->
-      <aside class="col-12 col-md-3">
-        <%= render 'layouts/sidebar' %>
-      </aside>
-
-      <!-- Content Section (9 columns) -->
-      <section class="col-12 col-md-9">
-        <%= yield %>
-      </section>
-    </main>
-    <%= render 'layouts/footer' %>
-
-    <div class="alert alert-secondary">
-    <%= debug(params) if Rails.env.development? %>
-  </div>
-  </div>
-
-
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Rails App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Reference the favicon.ico directly from the public directory -->
+    <%= favicon_link_tag asset_path("logo.png") %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_pack_tag "application", media: "all", "data-turbo-track": "reload" %>
+    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
+  </head>
+  <body>
+    <%= render "layouts/header" %>
+    <main id="main" class="main container" style="height: 4000px">
+    <div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title --></main>
+  </body>
 </html>

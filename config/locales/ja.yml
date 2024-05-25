@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+    attributes:
+  pages:
+    home:
+      headtop:
+        title1: "当社のサービスを選ぶ理由"
+        title2: "アカウント利用時の特典"
+        title3: "サービスステータスを調べる"
+        title4: "サービスを確認する"
+        title5: "他のサービスもチェックしてみる"

@@ -28,7 +28,6 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 # import scss
 --------------------------------------------------------------*/
 import "stylesheets/application"
-import "stylesheets/Codltd"
 import "stylesheets/style"
 
 window.jQuery = $;
