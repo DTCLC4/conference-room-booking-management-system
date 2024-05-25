@@ -9,11 +9,14 @@ gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 gem "dotenv-rails", "~> 2.1", ">= 2.1.1"
 
 # Use webpack to manage app-like JavaScript modules in Rails
-gem 'webpacker'
+gem "webpacker"
 
 # Provides the generator settings required for Rails to use Slim
-gem 'slim', '~> 5.2', '>= 5.2.1'
-gem 'slim-rails', '~> 3.6', '>= 3.6.3'
+gem "slim", "~> 5.2", ">= 5.2.1"
+gem "slim-rails", "~> 3.6", ">= 3.6.3"
+
+# A normaliser/beautifier for HTML that also understands embedded Ruby.
+gem "htmlbeautifier", "~> 1.3", ">= 1.3.1"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -57,13 +60,15 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: [:mswin, :mswin64, :mingw, :x64_mingw, :jruby]
-
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-
+  # Guard is a command line tool to easily handle events on file system modifications
+  gem "guard"
+  gem "guard-livereload", require: false
+  gem "rack-livereload"
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -76,9 +81,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   # Code coverage for Ruby with a powerful configuration library and automatic merging of coverage across test suites
-  gem 'simplecov-rcov', '~> 0.2.3'
-  gem 'simplecov', '~> 0.22.0'
-  # RuboCop is a Ruby code style checking and code formatting tool. It aims to enforce the community-driven Ruby Style Guide.
+  gem "simplecov", "~> 0.22.0"
+  gem "simplecov-rcov", "~> 0.2.3"
+  # RuboCop is a Ruby code style checking and code formatting tool
   gem "rubocop", "~> 1.26", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.14.0", require: false
