@@ -4,9 +4,23 @@ en:
     attributes:
   pages:
     home:
-      headtop:
-        title1: "Why choose our service?"
-        title2: "Benefits when using the account"
-        title3: "Look up service status"
-        title4: "Service & order support"
-        title5: "Check out other services"
+      auth:
+        signin: "Sign in"
+        signup: "Sign up"
+      language:
+        vn: Vietnamese
+        en: English
+        ja: Japanese
+      nav:
+        home: "Home"
+        product: "Product"
+        newsfeed: "News"
+        contact: "Contact"
+        company: "Company"
+        action: "Extracurricular activities"
+        help: "Do you need advice?"
+        service: "Attractive services"
+        search: "What do you want to search for..."
+      footer:
+        copyright: "Copyright"
+        Reserved: "All Rights Reserved"

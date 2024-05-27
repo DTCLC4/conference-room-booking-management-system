@@ -4,9 +4,23 @@ vi:
     attributes:
   pages:
     home:
-      headtop:
-        title1: "Tại sao chọn dịch vụ của chúng tôi?"
-        title2: "Lợi ích khi sử dụng tài khoản"
-        title3: "Tra cứu trạng thái dịch vụ"
-        title4: "Đặt lịch & các dịch vụ mới"
-        title5: "Tìm các dịch vụ khác"
+      auth:
+        signin: Đăng nhập
+        signup: Đăng ký
+      language:
+        vn: Tiếng việt
+        en: Tiếng anh
+        ja: Tiếng nhật
+      nav:
+        home: "Trang chủ"
+        product: "Sản phẩm"
+        newsfeed: "Tin tức"
+        contact: "Liên hệ"
+        company: "Công ty"
+        action: "Hoạt động ngoại khóa"
+        help: "Bạn cần tư vấn?"
+        service: "Các dịnh vụ hấp dẫn"
+        search: "Bạn muốn tìm kiếm gì..."
+      footer:
+        copyright: "Bản quyền"
+        Reserved: "Đã Đăng ký bản quyền"

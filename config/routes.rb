@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
-  scope "(:locale)", locale: /en|vi|ja/ do
-    namespace :user, path: '/' do
-      root 'pages#home'
-      get 'help', to: 'pages#help'
+    scope "(:locale)", locale: /en|vi|ja/ do
+      root 'static_pages#home'
+      get 'help', to: 'static_pages#help'
+
+      devise_for :users, controllers: {
+        sessions: 'users/sessions',
+        registrations: 'users/registrations',
+        passwords: 'users/passwords',
+        confirmations: 'users/confirmations',
+        unlocks: 'users/unlocks'
+      }
     end
-  end
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

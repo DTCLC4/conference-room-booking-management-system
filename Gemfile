@@ -21,6 +21,9 @@ gem "htmlbeautifier", "~> 1.3", ">= 1.3.1"
 # IDE tools for code analysis and autocompletion
 gem 'solargraph'
 
+# Flexible authentication solution for Rails with Warden
+gem 'devise', '~> 4.9', '>= 4.9.4'
+
 # A set of common locale data and translations to internationalize and/or localize your Rails applications.
 gem 'rails-i18n', '~> 7.0', '>= 7.0.8'
 

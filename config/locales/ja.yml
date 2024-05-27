@@ -10,3 +10,23 @@ ja:
         title3: "サービスステータスを調べる"
         title4: "サービスを確認する"
         title5: "他のサービスもチェックしてみる"
+      auth:
+        signin: "サインイン"
+        signup: "サインアップ"
+      language:
+        vn: ベトナム語
+        en: 英語
+        ja: 日本語
+      nav:
+        home: "家"
+        product: "製品"
+        newsfeed: "ニュース"
+        contact: "連絡先"
+        company: "会社"
+        action: "課外活動"
+        help: "アドバイスが必要ですか？"
+        service: "魅力的なサービス"
+        search: "何を探したいのですか..."
+      footer:
+        copyright: "著作権"
+        Reserved: "無断転載を禁じます"
