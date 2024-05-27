@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12 d-flex justify-content-between align-items-center">
         <div class="logo d-flex align-items-center">
-          <%= link_to @root_path, target: "_blank", rel: "nofollow" do %>
+          <%= link_to root_path,  rel: "nofollow" do %>
             <%= image_tag("logo.png", alt: "Example Image") %>
           <% end %>
           <span class="logotext">BookingApp</span>
@@ -11,8 +11,8 @@
         <%= render "layouts/navbar" %>
         <div class="search-bar">
           <form class="search-form d-flex align-items-center" method="POST" action="#">
-            <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-            <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+            <input type="text" name="query" placeholder="<%= t("pages.home.nav.search") %>" title="<%= t("pages.home.nav.search") %>">
+            <button type="submit"><i class="bi bi-search"></i></button>
           </form>
         </div>
         <nav class="navbar navbar-expand-lg">
@@ -20,41 +20,38 @@
             <div class="collapse navbar-collapse">
               <ul class="navbar-nav">
                 <li class="">
-                  <a class="nav-link" href="#">Dang nhap</a>
+                  <%= link_to t("pages.home.auth.signin"), new_user_session_path, class: 'nav-link' %>
                 </li>
                 <li class="">
-                  <a class="nav-link" href="#">register</a>
+                  <%= link_to t("pages.home.auth.signup"), new_user_registration_path, class: 'nav-link' %>
                 </li>
-
                 <li class=" dropdown pe-3">
                   <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
                     <i class="bi bi-translate"></i>
                   </a><!-- End Notification Icon -->
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li>
-                      <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                        <img src="https://tienichhay.net/uploads/flags/flat/24x24/vn.png">
-                        <span>Viestnamese</span>
-                      </a>
+                      <%= link_to({ locale: 'vi' }, class: 'dropdown-item d-flex align-items-center') do %>
+                        <img src="https://tienichhay.net/uploads/flags/flat/24x24/vn.png" alt="VietNam Flag">
+                        <span style="padding-left: 2px"><%= t("pages.home.language.vn") %></span>
+                      <% end %>
                     </li>
                     <li>
                       <hr class="dropdown-divider">
                     </li>
                     <li>
-                      <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                        <img src="https://tienichhay.net/uploads/flags/flat/24x24/jp.png">
-                        <span>Japanese</span>
-                      </a>
+                      <%= link_to({ locale: 'ja' }, class: 'dropdown-item d-flex align-items-center') do %>
+                        <img src="https://tienichhay.net/uploads/flags/flat/24x24/jp.png" alt="Japan Flag">
+                        <span style="padding-left: 2px"><%= t("pages.home.language.ja") %></span>
+                      <% end %>
                     </li>
                     <li>
                       <hr class="dropdown-divider">
                     </li>
-                    <li>
-                      <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                        <img src="https://tienichhay.net/uploads/flags/flat/24x24/gb.png">
-                        <span>ENglish</span>
-                      </a>
-                    </li>
+                    <%= link_to({ locale: 'en' }, class: 'dropdown-item d-flex align-items-center') do %>
+                      <img src="https://tienichhay.net/uploads/flags/flat/24x24/gb.png" alt="English Flag">
+                      <span style="padding-left: 2px"><%= t("pages.home.language.en") %></span>
+                    <% end %>
                   </ul>
                   <!-- End Profile Dropdown Items -->
                 </li>
@@ -62,59 +59,7 @@
             </div>
           </div>
         </nav>
-        <!-- End Search Bar -->
-        <%# <nav class="header-nav ms-auto">
-          <ul class="d-flex align-items-center">
-            <li class="nav-item d-block d-lg-none">
-              <a class="nav-link nav-icon search-bar-toggle " href="#">
-                <i class="bi bi-search"></i>
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-                <i class="bi bi-box-arrow-in-right"></i>
-              </span>
-            </a><!-- End Notification Icon -->
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-              <i class="bi bi-box-arrow-in-left"></i>
-            </a><!-- End Notification Icon -->
-          </li>
-          <li class="nav-item dropdown pe-3">
-            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-              <i class="bi bi-translate"></i>
-            </a><!-- End Notification Icon -->
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-              <li>
-                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                  <img src="https://tienichhay.net/uploads/flags/flat/24x24/vn.png">
-                  <span>Viestnamese</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li>
-                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                  <img src="https://tienichhay.net/uploads/flags/flat/24x24/jp.png">
-                  <span>Japanese</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li>
-                <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                  <img src="https://tienichhay.net/uploads/flags/flat/24x24/gb.png">
-                  <span>ENglish</span>
-                </a>
-              </li>
-            </ul>
-            <!-- End Profile Dropdown Items -->
-          </li>
-        </ul>
-      </nav><!-- End Icons Navigation --> %>
       </div>
     </div>
-  </header>
+  </div>
+</header>
