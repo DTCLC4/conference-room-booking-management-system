@@ -1,0 +1,12 @@
+vi:
+  activerecord:
+    models:
+    attributes:
+  pages:
+    home:
+      headtop:
+        title1: "Tại sao chọn dịch vụ của chúng tôi?"
+        title2: "Lợi ích khi sử dụng tài khoản"
+        title3: "Tra cứu trạng thái dịch vụ"
+        title4: "Đặt lịch & các dịch vụ mới"
+        title5: "Tìm các dịch vụ khác"

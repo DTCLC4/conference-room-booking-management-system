@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-
-  namespace :user, path: '/' do
-    root 'pages#home'
-    get 'help', to: 'pages#help'
+  scope "(:locale)", locale: /en|vi|ja/ do
+    namespace :user, path: '/' do
+      root 'pages#home'
+      get 'help', to: 'pages#help'
+    end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

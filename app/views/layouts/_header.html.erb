@@ -1,22 +1,120 @@
-<header class id="header">
-<section class="headtop">
-    <div class="container">
-        <div class="row">
-            <ul class="menutop">
-
-                <li><a href="https://tongkhonhaccu.com/tai-sao-mua-hang-tai-tygy-shop.html" title=" Tại sao mua hàng chính hãng tại TYGY Shop?"> Tại sao mua hàng chính hãng tại TYGY Shop?</a></li>
-
-                <li><a href="https://tongkhonhaccu.com/loi-ich-khi-su-dung-tai-khoan-mua-hang.html" title="Lợi ích khi sử dụng tài khoản mua hàng">Lợi ích khi sử dụng tài khoản mua hàng</a></li>
-
-                <li><a href="https://tongkhonhaccu.com/tra-cuu-don-hang.html" title="Tra cứu trạng thái đơn hàng">Tra cứu trạng thái đơn hàng</a></li>
-
-                <li><a href="https://tongkhonhaccu.com/kiem-tra-hanh-trinh-don-hang.html" title="Kiểm tra hành trình đơn hàng">Kiểm tra hành trình đơn hàng</a></li>
-
-            </ul>
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container justify-content-between">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-between align-items-center">
+        <div class="logo d-flex align-items-center">
+          <%= link_to @root_path, target: "_blank", rel: "nofollow" do %>
+            <%= image_tag("logo.png", alt: "Example Image") %>
+          <% end %>
+          <span class="logotext">BookingApp</span>
         </div>
+        <%= render "layouts/navbar" %>
+        <div class="search-bar">
+          <form class="search-form d-flex align-items-center" method="POST" action="#">
+            <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+            <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+          </form>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav">
+                <li class="">
+                  <a class="nav-link" href="#">Dang nhap</a>
+                </li>
+                <li class="">
+                  <a class="nav-link" href="#">register</a>
+                </li>
+
+                <li class=" dropdown pe-3">
+                  <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                    <i class="bi bi-translate"></i>
+                  </a><!-- End Notification Icon -->
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                    <li>
+                      <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                        <img src="https://tienichhay.net/uploads/flags/flat/24x24/vn.png">
+                        <span>Viestnamese</span>
+                      </a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                      <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                        <img src="https://tienichhay.net/uploads/flags/flat/24x24/jp.png">
+                        <span>Japanese</span>
+                      </a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                      <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                        <img src="https://tienichhay.net/uploads/flags/flat/24x24/gb.png">
+                        <span>ENglish</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- End Profile Dropdown Items -->
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- End Search Bar -->
+        <%# <nav class="header-nav ms-auto">
+          <ul class="d-flex align-items-center">
+            <li class="nav-item d-block d-lg-none">
+              <a class="nav-link nav-icon search-bar-toggle " href="#">
+                <i class="bi bi-search"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                <i class="bi bi-box-arrow-in-right"></i>
+              </span>
+            </a><!-- End Notification Icon -->
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+              <i class="bi bi-box-arrow-in-left"></i>
+            </a><!-- End Notification Icon -->
+          </li>
+          <li class="nav-item dropdown pe-3">
+            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+              <i class="bi bi-translate"></i>
+            </a><!-- End Notification Icon -->
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                  <img src="https://tienichhay.net/uploads/flags/flat/24x24/vn.png">
+                  <span>Viestnamese</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                  <img src="https://tienichhay.net/uploads/flags/flat/24x24/jp.png">
+                  <span>Japanese</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                  <img src="https://tienichhay.net/uploads/flags/flat/24x24/gb.png">
+                  <span>ENglish</span>
+                </a>
+              </li>
+            </ul>
+            <!-- End Profile Dropdown Items -->
+          </li>
+        </ul>
+      </nav><!-- End Icons Navigation --> %>
+      </div>
     </div>
-</section>
-</section>
-<section class="headermiddle">Header middle</section>
-<%= render 'layouts/navbar'%>
-</header>
+  </header>

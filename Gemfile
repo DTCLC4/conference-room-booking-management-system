@@ -18,6 +18,12 @@ gem "slim-rails", "~> 3.6", ">= 3.6.3"
 # A normaliser/beautifier for HTML that also understands embedded Ruby.
 gem "htmlbeautifier", "~> 1.3", ">= 1.3.1"
 
+# IDE tools for code analysis and autocompletion
+gem 'solargraph'
+
+# A set of common locale data and translations to internationalize and/or localize your Rails applications.
+gem 'rails-i18n', '~> 7.0', '>= 7.0.8'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

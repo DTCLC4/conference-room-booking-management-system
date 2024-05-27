@@ -23,5 +23,11 @@ module ConferenceRoomBookingManagementSystem
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Set the available locales
+    config.i18n.available_locales = [:en, :vi, :ja]
+
+    # Set the default locale
+    config.i18n.default_locale = :vi
   end
 end
