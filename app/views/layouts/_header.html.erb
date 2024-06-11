@@ -19,12 +19,23 @@
           <div class="container-fluid">
             <div class="collapse navbar-collapse">
               <ul class="navbar-nav">
-                <li class="">
-                  <%= link_to t("pages.home.auth.signin"), new_user_session_path, class: 'nav-link' %>
-                </li>
-                <li class="">
-                  <%= link_to t("pages.home.auth.signup"), new_user_registration_path, class: 'nav-link' %>
-                </li>
+
+
+<!-- Example with link_to -->
+<ul class="navbar-nav">
+  <% if user_signed_in? %>
+    <li class="nav-item">
+ <%= button_to "Sign out", destroy_user_session_path, method: :delete %>       <div> Welcome <%= current_user.email %> </div>
+    </li>
+  <% else %>
+    <li class="nav-item">
+      <%= link_to t("pages.home.auth.signin"), new_user_session_path, class: 'nav-link' %>
+    </li>
+    <li class="nav-item">
+      <%= link_to t("pages.home.auth.signup"), new_user_registration_path, class: 'nav-link' %>
+    </li>
+  <% end %>
+</ul>
                 <li class=" dropdown pe-3">
                   <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
                     <i class="bi bi-translate"></i>
