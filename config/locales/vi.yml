@@ -1,26 +1,63 @@
 vi:
   activerecord:
     models:
+      user: "Người dùng"
     attributes:
+      user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
+    errors:
+      messages:
+        blank: "không thể để trống"
+        too_short: "Tối thiểu %{count} ký tự"
+        invalid: "chỉ được chứa chữ cái và khoảng trắng, không chứa ký tự đặc biệt hoặc số"
+        email: "Email phải là '@gmail.com'!"
+        must_agree: "Bạn phải đồng ý trước khi gửi."
+
   pages:
     home:
       auth:
-        signin: Đăng nhập
-        signup: Đăng ký
+        log_in: "Đăng nhập"
+        sign_up: "Đăng ký"
       language:
-        vn: Tiếng việt
-        en: Tiếng anh
-        ja: Tiếng nhật
+        vn: "Tiếng Việt"
+        en: "Tiếng Anh"
+        ja: "Tiếng Nhật"
       nav:
         home: "Trang chủ"
         product: "Sản phẩm"
-        newsfeed: "Tin tức"
+        new_feed: "Tin tức"
         contact: "Liên hệ"
         company: "Công ty"
         action: "Hoạt động ngoại khóa"
         help: "Bạn cần tư vấn?"
-        service: "Các dịnh vụ hấp dẫn"
+        service: "Các dịch vụ hấp dẫn"
         search: "Bạn muốn tìm kiếm gì..."
       footer:
         copyright: "Bản quyền"
-        Reserved: "Đã Đăng ký bản quyền"
+        reserved: "Đã đăng ký bản quyền"
+
+    registrations:
+      title: "Tạo tài khoản"
+      text: "Nhập thông tin cá nhân của bạn để tạo tài khoản"
+
+      button:
+        sign_up: "Đăng ký"
+        log_in_google: "Đăng nhập bằng Google"
+
+      account_question: "Bạn đã có tài khoản?"
+
+      link:
+        log_in: "Đăng nhập"
+        confirmation_instructions_not_received: "Không nhận được hướng dẫn xác nhận?"
+      terms:
+        accept: "Tôi đồng ý và chấp nhận"
+        conditions: "các điều khoản và điều kiện"
+
+  notices:
+    user:
+      signed_up: "Tài khoản của bạn đã được tạo thành công!"
+      signed_in: "Bạn đã đăng nhập thành công!"
+      signed_out: "Bạn đã đăng xuất thành công!"

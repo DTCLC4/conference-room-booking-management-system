@@ -1,32 +1,63 @@
 ja:
   activerecord:
     models:
+      user: "ユーザー"
     attributes:
+      user:
+        name: "名前"
+        email: "メール"
+        password: "パスワード"
+        password_confirmation: "パスワードの確認"
+    errors:
+      messages:
+        blank: "が空白です"
+        too_short: "は%{count}文字以上でなければなりません"
+        invalid: "は文字とスペースのみが許可され、特殊文字や数字は含めることができません"
+        email: "は '@gmail.com' でなければなりません！"
+        must_agree: "送信する前に同意する必要があります。"
+
   pages:
     home:
-      headtop:
-        title1: "当社のサービスを選ぶ理由"
-        title2: "アカウント利用時の特典"
-        title3: "サービスステータスを調べる"
-        title4: "サービスを確認する"
-        title5: "他のサービスもチェックしてみる"
       auth:
-        signin: "サインイン"
-        signup: "サインアップ"
+        log_in: "ログイン"
+        sign_up: "サインアップ"
       language:
-        vn: ベトナム語
-        en: 英語
-        ja: 日本語
+        vn: "ベトナム語"
+        en: "英語"
+        ja: "日本語"
       nav:
-        home: "家"
+        home: "ホーム"
         product: "製品"
-        newsfeed: "ニュース"
-        contact: "連絡先"
+        new_feed: "ニュース"
+        contact: "お問い合わせ"
         company: "会社"
         action: "課外活動"
-        help: "アドバイスが必要ですか？"
+        help: "ヘルプが必要ですか？"
         service: "魅力的なサービス"
-        search: "何を探したいのですか..."
+        search: "何を探していますか..."
       footer:
         copyright: "著作権"
-        Reserved: "無断転載を禁じます"
+        reserved: "全著作権所有"
+
+    registrations:
+      title: "アカウントを作成する"
+      text: "アカウントを作成するために個人情報を入力してください"
+
+      button:
+        sign_up: "サインアップ"
+        log_in_google: "Googleでログイン"
+
+      account_question: "すでにアカウントをお持ちですか？"
+
+      link:
+        log_in: "ログイン"
+        confirmation_instructions_not_received: "確認メールが届かない場合？"
+      terms:
+        accept: "同意して承認"
+        conditions: "利用規約と条件"
+
+  notices:
+    user:
+      signed_up: "アカウントが正常に作成されました！"
+      signed_in: "ログインに成功しました！"
+      signed_out: "ログアウトに成功しました！"

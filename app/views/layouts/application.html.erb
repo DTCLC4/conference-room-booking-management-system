@@ -15,6 +15,8 @@
     <%= render "layouts/header" %>
     <main id="main" class="main container" style="height: 4000px">
       <%= yield %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     </main>
     <%= render "layouts/footer" %>
   </body>
