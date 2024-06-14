@@ -32,3 +32,19 @@ import "stylesheets/style"
 
 window.jQuery = $;
 window.$ = $;
+
+document.addEventListener("DOMContentLoaded", function() {
+  var acceptTerms = document.getElementById('acceptTerms');
+
+  // Thiết lập thông báo lỗi khi không hợp lệ
+  acceptTerms.addEventListener('invalid', function(event) {
+    this.setCustomValidity(this.dataset.message);
+  });
+
+  // Reset lại thông báo lỗi khi hợp lệ
+  acceptTerms.addEventListener('change', function() {
+    if (this.checked) {
+      this.setCustomValidity('');
+    }
+  });
+});

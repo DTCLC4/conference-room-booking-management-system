@@ -1,29 +1,55 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="card mb-3">
+  <div class="card-body">
+    <div class="pt-4 pb-2">
+      <h5 class="card-title text-center pb-0 fs-4"><%= t("pages.registrations.title") %></h5>
+      <p class="text-center small"><%= t("pages.registrations.text") %></p>
+    </div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "row g-3" }) do |f| %>
+      <div class="col-12">
+        <%= f.label :name, t('activerecord.attributes.user.name'), class: 'form-label', for: 'name' %>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'form-control', id: 'name' %>
+        <% if resource.errors[:name].present? %>
+          <div class="error_message"><%= resource.errors.full_messages_for(:name).first %></div>
+        <% end %>
+      </div>
+      <div class="col-12">
+        <%= f.label :email, t('activerecord.attributes.user.email'), class: 'form-label', for: 'email' %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', id: 'email' %>
+        <% if resource.errors[:email].present? %>
+          <div class="error_message"><%= resource.errors.full_messages_for(:email).first %></div>
+        <% end %>
+      </div>
+      <div class="col-12">
+        <%= f.label :password, t('activerecord.attributes.user.password'), class: 'form-label', for: 'password' %>
+        <%= f.password_field :password, autocomplete: "new-password", class: 'form-control', id: 'password' %>
+        <% if resource.errors[:password].present? %>
+          <div class="error_message"><%= resource.errors.full_messages_for(:password).first %></div>
+        <% end %>
+      </div>
+      <div class="col-12">
+        <%= f.label :password_confirmation, t('activerecord.attributes.user.password_confirmation'), class: 'form-label', for: 'password_confirmation' %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control', id: 'password_confirmation' %>
+        <% if resource.errors[:password_confirmation].present? %>
+          <div class="error_message"><%= resource.errors.full_messages_for(:password_confirmation).first %></div>
+        <% end %>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required data-message="<%= t('activerecord.errors.messages.must_agree') %>">
+          <label class="form-check-label" for="acceptTerms"><%= t('pages.registrations.terms.accept') %> <a href="#"><%= t('pages.registrations.terms.conditions') %></a></label>
+        </div>
+      </div>
+      <div class="col-12">
+        <%= f.submit t('pages.registrations.button.sign_up'), class: 'btn btn-primary w-100' %>
+      </div>
+      <div class="col-12">
+        <button type="button" class="login-with-google-btn w-100" >
+          <%= t('pages.registrations.button.log_in_google')%>
+        </button>
+      </div>
+      <div class="col-12">
+        <p class="small mb-0"><%= t('pages.registrations.account_question')%> <%= render "devise/shared/links" %></p>
+      </div>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

@@ -1,26 +1,63 @@
 en:
   activerecord:
     models:
+      user: "User"
     attributes:
+      user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+    errors:
+      messages:
+        blank: "can't be blank"
+        too_short: "is too short (minimum is %{count} characters)"
+        invalid: "only allows letters and spaces, no special characters or numbers"
+        email: "must be '@gmail.com'!"
+        must_agree: "You must agree before submitting."
+
   pages:
     home:
       auth:
-        signin: "Sign in"
-        signup: "Sign up"
+        log_in: "Log In"
+        sign_up: "Sign Up"
       language:
-        vn: Vietnamese
-        en: English
-        ja: Japanese
+        vn: "Vietnamese"
+        en: "English"
+        ja: "Japanese"
       nav:
         home: "Home"
         product: "Product"
-        newsfeed: "News"
+        new_feed: "News"
         contact: "Contact"
         company: "Company"
-        action: "Extracurricular activities"
-        help: "Do you need advice?"
-        service: "Attractive services"
-        search: "What do you want to search for..."
+        action: "Extracurricular Activities"
+        help: "Need Help?"
+        service: "Exciting Services"
+        search: "What are you looking for..."
       footer:
         copyright: "Copyright"
-        Reserved: "All Rights Reserved"
+        reserved: "All Rights Reserved"
+
+    registrations:
+      title: "Create Account"
+      text: "Enter your personal information to create an account"
+
+      button:
+        sign_up: "Sign Up"
+        log_in_google: "Log In with Google"
+
+      account_question: "Already have an account?"
+
+      link:
+        log_in: "Log In"
+        confirmation_instructions_not_received: "Didn't receive confirmation instructions?"
+      terms:
+        accept: "I agree and accept"
+        conditions: "the terms and conditions"
+
+  notices:
+    user:
+      signed_up: "Your account has been successfully created!"
+      signed_in: "You have successfully signed in!"
+      signed_out: "You have successfully signed out!"
