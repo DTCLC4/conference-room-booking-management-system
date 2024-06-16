@@ -27,6 +27,9 @@
                   </div>
                   <!-- End Logo -->
                   <%= yield %>
+                  <div class="alert alert-secondary">
+                    <%= debug(params) if Rails.env.development? %>
+                  </div>
                 </div>
               </div>
             </div>

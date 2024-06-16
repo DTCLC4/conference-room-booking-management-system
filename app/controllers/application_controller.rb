@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale
+  layout :layout_by_resource
 
   private
 
@@ -8,6 +9,16 @@ class ApplicationController < ActionController::Base
   end
 
   def default_url_options
-    {locale: I18n.locale}
+    { locale: I18n.locale }
+  end
+
+  protected
+
+  def layout_by_resource
+    if devise_controller? && resource_name == :user && %w[new create].include?(action_name)
+      "login"
+    else
+      "application"
+    end
   end
 end

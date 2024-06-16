@@ -32,6 +32,7 @@ import "stylesheets/style"
 
 window.jQuery = $;
 window.$ = $;
+global.toastr = require("toastr")
 
 document.addEventListener("DOMContentLoaded", function() {
   var acceptTerms = document.getElementById('acceptTerms');
