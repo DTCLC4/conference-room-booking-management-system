@@ -1,16 +1,18 @@
 Rails.application.routes.draw do
-    scope "(:locale)", locale: /en|vi|ja/ do
-      root 'static_pages#home'
-      get 'help', to: 'static_pages#help'
+  scope "(:locale)", locale: /en|vi|ja/ do
+    root "static_pages#home"
+    get "help", to: "static_pages#help"
 
-      devise_for :users, controllers: {
-        sessions: 'users/sessions',
-        registrations: 'users/registrations',
-        passwords: 'users/passwords',
-        confirmations: 'users/confirmations',
-        unlocks: 'users/unlocks'
-      }
-    end
+    devise_for :users, controllers: {
+                         sessions: "users/sessions",
+                         registrations: "users/registrations",
+                         passwords: "users/passwords",
+                         confirmations: "users/confirmations",
+                         unlocks: "users/unlocks",
+                       }
+
+    get "dashboard", to: "dashboard#index"
+  end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

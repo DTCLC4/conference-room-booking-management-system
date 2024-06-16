@@ -6,8 +6,8 @@ class User < ApplicationRecord
          :confirmable
 
   validates :name, presence: true,
-         length: { minimum: 5 },
-         format: { with: /\A[a-zA-Z\s]+\z/, message: I18n.t('activerecord.errors.messages.invalid') }
+                   length: { minimum: 5 },
+                   format: { with: /\A[\p{L}\s]+\z/, message: I18n.t("activerecord.errors.messages.invalid") }
 
   validate :email_domain_must_be_gmail
 
@@ -16,9 +16,7 @@ class User < ApplicationRecord
   def email_domain_must_be_gmail
     return if email.blank?
 
-    domain = email.split('@').last
-    unless domain == "gmail.com"
-      errors.add(:email, I18n.t('pages.registrations.errors.messages.email'))
-    end
+    domain = email.split("@").last
+    errors.add(:email, I18n.t("activerecord.errors.messages.email")) unless domain == "gmail.com"
   end
 end
