@@ -308,7 +308,7 @@ Style/NonNilCheck:
   IncludeSemanticChanges: false
 
 Style/MethodDefParentheses:
-  EnforcedStyle: require_no_parentheses
+  EnforcedStyle: require_parentheses
   SupportedStyles:
     - require_parentheses
     - require_no_parentheses
@@ -419,8 +419,8 @@ Layout/SpaceInsideBlockBraces:
   SpaceBeforeBlockParameters: false
 
 Layout/SpaceInsideHashLiteralBraces:
-  EnforcedStyle: no_space
-  EnforcedStyleForEmptyBraces: no_space
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: space
   SupportedStyles:
     - space
     - no_space
