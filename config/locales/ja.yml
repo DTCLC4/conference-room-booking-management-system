@@ -10,54 +10,100 @@ ja:
         password_confirmation: "パスワードの確認"
     errors:
       messages:
-        blank: "が空白です"
-        too_short: "は%{count}文字以上でなければなりません"
-        invalid: "は文字とスペースのみが許可され、特殊文字や数字は含めることができません"
-        email: "は '@gmail.com' でなければなりません！"
-        must_agree: "送信する前に同意する必要があります。"
+        blank: "空欄にできません"
+        too_short: "最小 %{count} 文字"
+        invalid: "文字とスペースのみ使用可能、特殊文字や数字は使用不可"
+        email: "メールは '@gmail.com' でなければなりません!"
+        must_agree: "続行する前に同意する必要があります。"
 
-  pages:
-    home:
-      auth:
-        log_in: "ログイン"
-        sign_up: "サインアップ"
+  layouts:
+    header:
+      log_in: "ログイン"
+      sign_up: "サインアップ"
+      log_out: "ログアウト"
+      title_search: "何を探していますか..."
       language:
         vn: "ベトナム語"
         en: "英語"
         ja: "日本語"
-      nav:
-        home: "ホーム"
-        product: "製品"
-        new_feed: "ニュース"
-        contact: "お問い合わせ"
-        company: "会社"
-        action: "課外活動"
-        help: "ヘルプが必要ですか？"
-        service: "魅力的なサービス"
-        search: "何を探していますか..."
-      footer:
-        copyright: "著作権"
-        reserved: "全著作権所有"
+    footer:
+      copyright: "著作権"
+      reserved: "全著作権所有"
+    nav:
+      home: "ホーム"
+      product: "製品"
+      new_feed: "ニュース"
+      contact: "お問い合わせ"
+      company: "会社"
+      action: "アウトドア活動"
+      help: "助言が必要ですか？"
+      service: "付随サービス"
 
+  components:
+    button:
+      sign_up: "サインアップ"
+      log_in: "ログイン"
+      log_in_google: "Googleでログイン"
+      reset_password: "パスワードリセットの手順を送信"
+      Confirm: "確認メールを再送"
+      Confirm_password: "新しいパスワードを確認"
+    checkbox:
+      remember_me: "ログイン状態を保持"
+
+  shared:
+    account_question: "既にアカウントをお持ちですか？"
+    link:
+      sign_up: "サインアップ"
+      log_in: "ログイン"
+      forgot_password: "パスワードをお忘れですか？"
+      confirmation_instructions_not_received: "確認指示が届いていませんか？"
+
+  email:
+    welcome_message: "ようこそ、%{email}!"
+    email_confirmation:
+      confirm_email: "以下のリンクを通じてアカウントのメールを確認できます:"
+      confirm_button: "アカウントを確認"
+    email_change_notification:
+      unconfirmed_email: "メールが %{email} に変更されていることをお知らせします。"
+      confirmed_email: "メールが %{email} に変更されたことをお知らせします。"
+    password_change_notification:
+      password_changed: "パスワードが変更されたことをお知らせします。"
+    reset_password:
+      password_change_request: "誰かがあなたのパスワードを変更するリンクをリクエストしました。以下のリンクを通じて変更できます。"
+      change_password_link: "パスワードを変更"
+      ignore_request: "このリクエストを行っていない場合は、このメールを無視してください。"
+      password_not_changed: "上記のリンクにアクセスして新しいパスワードを作成するまで、パスワードは変更されません。"
+
+  pages:
     registrations:
-      title: "アカウントを作成する"
-      text: "アカウントを作成するために個人情報を入力してください"
+      title: "アカウントを作成"
+      text: "個人情報を入力してアカウントを作成"
 
-      button:
-        sign_up: "サインアップ"
-        log_in_google: "Googleでログイン"
-
-      account_question: "すでにアカウントをお持ちですか？"
-
-      link:
-        log_in: "ログイン"
-        confirmation_instructions_not_received: "確認メールが届かない場合？"
       terms:
-        accept: "同意して承認"
-        conditions: "利用規約と条件"
+        accept: "に同意します"
+        conditions: "利用規約"
+      functions:
+        signed_up_successfully: "サインアップが成功しました！"
+        inactive_signed_up: "サインアップが成功しました。メールを確認してください"
+
+    login:
+      title: "アカウントにログイン"
+      text: "メールとパスワードを入力してログイン"
+
+    forgot_password:
+      title: "パスワードをお忘れですか？"
+      text: "新しいパスワードを作成するためにメールを入力"
+
+    confirmations:
+      title: "メールを受け取っていませんか？"
+      text: "指示を受け取るためにメールを入力"
+
+    new_password:
+      title: "パスワードを変更"
+      text: "新しいパスワードを入力"
 
   notices:
     user:
       signed_up: "アカウントが正常に作成されました！"
-      signed_in: "ログインに成功しました！"
-      signed_out: "ログアウトに成功しました！"
+      signed_in: "正常にログインしました！"
+      signed_out: "正常にログアウトしました！"

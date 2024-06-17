@@ -9,4 +9,8 @@ module ApplicationHelper
       flash_message << text if message
     end.join("\n")
   end
+
+  def company_active?
+    current_page?(action_path) || current_page?(product_path) || current_page?(service_path) || current_page?(new_feed_path)
+  end
 end

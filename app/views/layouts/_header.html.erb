@@ -11,7 +11,7 @@
         <%= render "layouts/navbar" %>
         <div class="search-bar">
           <form class="search-form d-flex align-items-center" method="POST" action="#">
-            <input type="text" name="query" placeholder="<%= t("pages.home.nav.search") %>" title="<%= t("pages.home.nav.search") %>">
+            <input type="text" name="query" placeholder="<%= t("layouts.header.title_search") %>" title="<%= t("layouts.header.title_search") %>">
             <button type="submit"><i class="bi bi-search"></i></button>
           </form>
         </div>
@@ -23,15 +23,14 @@
                 <ul class="navbar-nav">
                   <% if user_signed_in? %>
                     <li class="nav-item">
-                      <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
-                      <div> Welcome <%= current_user.email %> </div>
+                      <%= button_to t("layouts.header.log_out"), destroy_user_session_path, class: 'nav-link', method: :delete %>
                     </li>
                   <% else %>
                     <li class="nav-item">
-                      <%= link_to t("pages.home.auth.log_in"), new_user_session_path, class: 'nav-link' %>
+                      <%= link_to t("layouts.header.log_in"), new_user_session_path, class: 'nav-link' %>
                     </li>
                     <li class="nav-item">
-                      <%= link_to t("pages.home.auth.sign_up"), new_user_registration_path, class: 'nav-link' %>
+                      <%= link_to t("layouts.header.sign_up"), new_user_registration_path, class: 'nav-link' %>
                     </li>
                   <% end %>
                 </ul>
@@ -43,7 +42,7 @@
                     <li>
                       <%= link_to({ locale: 'vi' }, class: 'dropdown-item d-flex align-items-center') do %>
                         <img src="https://tienichhay.net/uploads/flags/flat/24x24/vn.png" alt="VietNam Flag">
-                        <span style="padding-left: 2px"><%= t("pages.home.language.vn") %></span>
+                        <span style="padding-left: 2px"><%= t("layouts.header.language.vn") %></span>
                       <% end %>
                     </li>
                     <li>
@@ -52,7 +51,7 @@
                     <li>
                       <%= link_to({ locale: 'ja' }, class: 'dropdown-item d-flex align-items-center') do %>
                         <img src="https://tienichhay.net/uploads/flags/flat/24x24/jp.png" alt="Japan Flag">
-                        <span style="padding-left: 2px"><%= t("pages.home.language.ja") %></span>
+                        <span style="padding-left: 2px"><%= t("layouts.header.language.ja") %></span>
                       <% end %>
                     </li>
                     <li>
@@ -60,7 +59,7 @@
                     </li>
                     <%= link_to({ locale: 'en' }, class: 'dropdown-item d-flex align-items-center') do %>
                       <img src="https://tienichhay.net/uploads/flags/flat/24x24/gb.png" alt="English Flag">
-                      <span style="padding-left: 2px"><%= t("pages.home.language.en") %></span>
+                      <span style="padding-left: 2px"><%= t("layouts.header.language.en") %></span>
                     <% end %>
                   </ul>
                   <!-- End Profile Dropdown Items -->

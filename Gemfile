@@ -48,6 +48,18 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# A generalized Rack framework for multiple-provider authentication.
+gem "omniauth", "~> 1.6", ">= 1.6.1"
+
+# A Google OAuth2 strategy for OmniAuth 1.x. This allows you to login to Google with your ruby app.
+gem "omniauth-google-oauth2"
+
+# Cross-Site Request Forgery on the request phrase when using OmniAuth gem with a Ruby on Rails application
+gem "omniauth-rails_csrf_protection"
+
+# Middleware that will make Rack-based apps CORS compatible.
+gem "rack-cors"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
