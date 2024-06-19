@@ -34,18 +34,7 @@ window.jQuery = $;
 window.$ = $;
 global.toastr = require("toastr")
 
-document.addEventListener("DOMContentLoaded", function() {
-  var acceptTerms = document.getElementById('acceptTerms');
+// Import custom validation module
+import { setupValidation } from '../utils/form_validation';
 
-  // Thiết lập thông báo lỗi khi không hợp lệ
-  acceptTerms.addEventListener('invalid', function(event) {
-    this.setCustomValidity(this.dataset.message);
-  });
-
-  // Reset lại thông báo lỗi khi hợp lệ
-  acceptTerms.addEventListener('change', function() {
-    if (this.checked) {
-      this.setCustomValidity('');
-    }
-  });
-});
+setupValidation();

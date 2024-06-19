@@ -40,16 +40,12 @@
         </div>
       </div>
       <div class="col-12">
-        <%= f.submit t('pages.registrations.button.sign_up'), class: 'btn btn-primary w-100' %>
-      </div>
-      <div class="col-12">
-        <button type="button" class="login-with-google-btn w-100" >
-          <%= t('pages.registrations.button.log_in_google')%>
-        </button>
-      </div>
-      <div class="col-12">
-        <p class="small mb-0"><%= t('pages.registrations.account_question')%> <%= render "devise/shared/links" %></p>
+        <%= f.submit t('components.button.sign_up'), class: 'btn btn-primary w-100' %>
       </div>
     <% end %>
+    <div class="col-12">
+      <hr>
+      <p class="mb-2"><%= t('shared.account_question')%> <%= render "devise/shared/links" %></p>
+    </div>
   </div>
 </div>
