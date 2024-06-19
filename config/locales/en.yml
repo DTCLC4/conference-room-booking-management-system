@@ -11,53 +11,99 @@ en:
     errors:
       messages:
         blank: "can't be blank"
-        too_short: "is too short (minimum is %{count} characters)"
-        invalid: "only allows letters and spaces, no special characters or numbers"
-        email: "must be '@gmail.com'!"
-        must_agree: "You must agree before submitting."
+        too_short: "Minimum %{count} characters"
+        invalid: "can only contain letters and spaces, no special characters or numbers"
+        email: "Email must be '@gmail.com'!"
+        must_agree: "You must agree before continuing."
 
-  pages:
-    home:
-      auth:
-        log_in: "Log In"
-        sign_up: "Sign Up"
+  layouts:
+    header:
+      log_in: "Log in"
+      sign_up: "Sign up"
+      log_out: "Log out"
+      title_search: "What are you looking for..."
       language:
         vn: "Vietnamese"
         en: "English"
         ja: "Japanese"
-      nav:
-        home: "Home"
-        product: "Product"
-        new_feed: "News"
-        contact: "Contact"
-        company: "Company"
-        action: "Extracurricular Activities"
-        help: "Do you need advice?"
-        service: "Exciting Services"
-        search: "What are you looking for..."
-      footer:
-        copyright: "Copyright"
-        reserved: "All Rights Reserved"
+    footer:
+      copyright: "Copyright"
+      reserved: "All rights reserved"
+    nav:
+      home: "Home"
+      product: "Product"
+      new_feed: "News"
+      contact: "Contact"
+      company: "Company"
+      action: "Outdoor activities"
+      help: "Need advice?"
+      service: "Accompanying services"
 
+  components:
+    button:
+      sign_up: "Sign up"
+      log_in: "Log in"
+      log_in_google: "Log in with Google"
+      reset_password: "Send me reset password instructions"
+      Confirm: "Resend confirmation email"
+      Confirm_password: "Confirm new password"
+    checkbox:
+      remember_me: "Remember me"
+
+  shared:
+    account_question: "Already have an account?"
+    link:
+      sign_up: "Sign up"
+      log_in: "Log in"
+      forgot_password: "Forgot your password?"
+      confirmation_instructions_not_received: "Didn't receive confirmation instructions?"
+
+  email:
+    welcome_message: "Welcome, %{email}!"
+    email_confirmation:
+      confirm_email: "You can confirm your account email through the link below:"
+      confirm_button: "Confirm my account"
+    email_change_notification:
+      unconfirmed_email: "We are contacting you to notify you that your email is being changed to %{email}."
+      confirmed_email: "We are contacting you to notify you that your email has been changed to %{email}."
+    password_change_notification:
+      password_changed: "We are contacting you to notify you that your password has been changed."
+    reset_password:
+      password_change_request: "Someone has requested a link to change your password. You can do this through the link below."
+      change_password_link: "Change my password"
+      ignore_request: "If you didn't request this, please ignore this email."
+      password_not_changed: "Your password won't change until you access the link above and create a new one."
+
+  pages:
     registrations:
-      title: "Create Account"
+      title: "Create an account"
       text: "Enter your personal information to create an account"
 
-      button:
-        sign_up: "Sign Up"
-        log_in_google: "Log In with Google"
-
-      account_question: "Already have an account?"
-
-      link:
-        log_in: "Log In"
-        confirmation_instructions_not_received: "Didn't receive confirmation instructions?"
       terms:
-        accept: "I agree and accept"
-        conditions: "the terms and conditions"
+        accept: "I agree to the"
+        conditions: "terms and conditions"
+      functions:
+        signed_up_successfully: "Sign up successful!"
+        inactive_signed_up: "You have signed up successfully, please check your email"
+
+    login:
+      title: "Log in to your account"
+      text: "Enter your email and password to log in"
+
+    forgot_password:
+      title: "Forgot your password?"
+      text: "Enter your email to create a new password"
+
+    confirmations:
+      title: "Didn't receive the email?"
+      text: "Enter your email to receive instructions"
+
+    new_password:
+      title: "Change password"
+      text: "Enter your new password"
 
   notices:
     user:
-      signed_up: "Your account has been successfully created!"
-      signed_in: "You have successfully signed in!"
-      signed_out: "You have successfully signed out!"
+      signed_up: "Your account has been created successfully!"
+      signed_in: "You have logged in successfully!"
+      signed_out: "You have logged out successfully!"

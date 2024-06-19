@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class Users::SessionsController < Devise::SessionsController
+  # Uncomment if you have extra params to permit
   # before_action :configure_sign_in_params, only: [:create]
-
   # GET /resource/sign_in
   # def new
   #   super
