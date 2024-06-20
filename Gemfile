@@ -75,6 +75,8 @@ gem "tzinfo-data", platforms: [:mswin, :mswin64, :mingw, :x64_mingw, :jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# rspec-rails is a testing framework for Rails 5+.
+gem "rspec-rails", "~> 4.0.1"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -86,6 +88,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+
   # Guard is a command line tool to easily handle events on file system modifications
   gem "guard"
   gem "guard-livereload", require: false
@@ -101,17 +104,19 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+
   # Code coverage for Ruby with a powerful configuration library and automatic merging of coverage across test suites
   gem "simplecov", "~> 0.22.0"
   gem "simplecov-rcov", "~> 0.2.3"
+
   # RuboCop is a Ruby code style checking and code formatting tool
   gem "rubocop", "~> 1.26", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.14.0", require: false
+
   # factory_bot_rails provides integration between factory_bot and rails 5.0 or newer
   gem "factory_bot_rails"
+
   # Extracting `assigns` and `assert_template` from ActionDispatch.
   gem "rails-controller-testing"
-  # rspec-rails is a testing framework for Rails 5+.
-  gem "rspec-rails", "~> 4.0.1"
 end

@@ -56,6 +56,7 @@ ja:
       sign_up: "サインアップ"
       log_in: "ログイン"
       forgot_password: "パスワードをお忘れですか？"
+      back_to_home: "ホームページに戻ります"
       confirmation_instructions_not_received: "確認指示が届いていませんか？"
 
   email:
