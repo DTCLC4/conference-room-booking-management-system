@@ -47,7 +47,7 @@ RSpec.describe User, type: :model do
 
     it "remembers user" do
       user = create(:user)
-      user.remember_me = true
+      user.remember_me!
       user.save
       expect(user.remember_created_at).not_to be_nil
     end

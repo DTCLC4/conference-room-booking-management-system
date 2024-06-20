@@ -1,6 +1,7 @@
 module ApplicationHelper
   def toastr_flash
     flash.each_with_object([]) do |(type, message), flash_message|
+      next unless %w[notice alert].include?(type)
       type = "success" if type == "notice"
       type = "error" if type == "alert"
       text = content_tag(:script, nil, type: "text/javascript") do

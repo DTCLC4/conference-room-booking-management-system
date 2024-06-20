@@ -56,6 +56,7 @@ vi:
       sign_up: "Đăng ký"
       log_in: "Đăng nhập"
       forgot_password: "Quên mật khẩu"
+      back_to_home: "Quay về trang chủ"
       confirmation_instructions_not_received: "Không nhận được hướng dẫn xác nhận?"
 
   email:
