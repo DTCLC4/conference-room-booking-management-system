@@ -25,16 +25,16 @@ Rails.application.routes.draw do
                        }
 
     get "dashboard", to: "dashboard#index"
+
+    # Route for static pages has errors
+    match "/404", to: "errors#not_found", via: :all
+    match "/500", to: "errors#internal_server_error", via: :all
+    match "/422", to: "errors#unprocessable_entity", via: :all
+
+    # Default route to handle requests that do not exist
+    match "*path", to: "errors#not_found", via: :all
   end
 
   # Health check route
   get "up" => "rails/health#show", as: :rails_health_check
-
-  # Route for static pages has errors
-  match "/404", to: "errors#not_found", via: :all
-  match "/500", to: "errors#internal_server_error", via: :all
-  match "/422", to: "errors#unprocessable_entity", via: :all
-
-  # Default route to handle requests that do not exist
-  match "*path", to: "errors#not_found", via: :all
 end

@@ -35,9 +35,9 @@ en:
       new_feed: "News"
       contact: "Contact"
       company: "Company"
-      action: "Outdoor activities"
+      action: "Activities"
       help: "Need advice?"
-      service: "Accompanying services"
+      service: "Services"
 
   components:
     button:
