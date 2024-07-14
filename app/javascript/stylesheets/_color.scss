@@ -1,22 +1,22 @@
-// Biến màu sắc chính
-$primary-color: #4154f1;
-$secondary-color: #5465f2;
-$tertiary-color: #6676f3;
-$quaternary-color: #7a87f5;
-$quinary-color: #8d98f6;
-$senary-color: #a0a9f8;
-$septenary-color: #b3baf9;
-$octonary-color: #c6cbfa;
-$nonary-color: #d9dcfc;
-$denary-color: #ecedfd;
-$white-color: #ffffff;
-
-$background-color: #f6f9ff;
-$text-color: #444444;
-$hover-color: red;
-$accent-color: #012970;
-
-// Font family
-$font-family-base: "Open Sans", sans-serif;
-$font-family-heading: "Nunito", sans-serif;
-$font-family-title: "Poppins", sans-serif;
+:root {
+  --background: hsl(0, 0%, 100%); /* Màu trắng */
+  --foreground: hsl(222.2, 84%, 4.9%); /* Màu xanh đậm gần như đen */
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222.2, 84%, 4.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222.2, 84%, 4.9%);
+  --primary: hsl(221.2, 83.2%, 53.3%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96.1%);
+  --secondary-foreground: hsl(222.2, 47.4%, 11.2%);
+  --muted: hsl(210, 40%, 96.1%);
+  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+  --accent: hsl(210, 40%, 96.1%);
+  --accent-foreground: hsl(222.2, 47.4%, 11.2%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --ring: hsl(221.2, 83.2%, 53.3%);
+  --radius: 0.5rem;
+}

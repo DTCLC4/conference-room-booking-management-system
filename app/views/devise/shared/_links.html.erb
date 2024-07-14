@@ -13,7 +13,6 @@
 <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
   <%= link_to t('shared.link.unlock_account'), new_unlock_path(resource_name) %><br />
 <% end %>
-<%= link_to t("shared.link.back_to_home"), root_path %>
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
     <%= button_to t('components.button.log_in_google'), user_google_oauth2_omniauth_authorize_path(provider: 'google_oauth2'), method: :post, data: { turbo: false }, class: "login-with-google-btn w-100" %><br />

@@ -13,7 +13,7 @@ ja:
         blank: "空欄にできません"
         too_short: "最小 %{count} 文字"
         invalid: "文字とスペースのみ使用可能、特殊文字や数字は使用不可"
-        email: "メールは '@gmail.com' でなければなりません!"
+        email: " '@gmail.com' でなければなりません!"
         must_agree: "続行する前に同意する必要があります。"
 
   layouts:

@@ -13,7 +13,7 @@ en:
         blank: "can't be blank"
         too_short: "Minimum %{count} characters"
         invalid: "can only contain letters and spaces, no special characters or numbers"
-        email: "Email must be '@gmail.com'!"
+        email: " must be '@gmail.com'!"
         must_agree: "You must agree before continuing."
 
   layouts:
