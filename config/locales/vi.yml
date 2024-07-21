@@ -13,7 +13,7 @@ vi:
         blank: "không thể để trống"
         too_short: "Tối thiểu %{count} ký tự"
         invalid: "chỉ được chứa chữ cái và khoảng trắng, không chứa ký tự đặc biệt hoặc số"
-        email: "Email phải là '@gmail.com'!"
+        email: " phải là '@gmail.com'!"
         must_agree: "Bạn phải đồng ý trước khi tiếp tục."
 
   layouts:

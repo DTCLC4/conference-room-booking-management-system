@@ -12,14 +12,6 @@
     <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
   </head>
   <body>
-    <%= render "layouts/header" %>
-    <main id="main" class="main container" style="height: 4000px">
-      <%= raw toastr_flash %>
-      <%= yield %>
-       <div class="alert alert-secondary">
-          <%= debug(params) if Rails.env.development? %>
-        </div>
-    </main>
-    <%= render "layouts/footer" %>
+    <%= yield %>
   </body>
 </html>

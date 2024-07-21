@@ -34,7 +34,6 @@ window.jQuery = $;
 window.$ = $;
 global.toastr = require("toastr")
 
-// Import custom validation module
-import { setupValidation } from '../utils/form_validation';
-
-setupValidation();
+/*--------------------------------------------------------------
+# Import custom validation module
+--------------------------------------------------------------*/

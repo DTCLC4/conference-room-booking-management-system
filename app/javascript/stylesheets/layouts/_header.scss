@@ -1,17 +1,1 @@
 @import "../_color";
-
-.navbar-nav .nav-item {
-  padding: 0 5px;
-}
-
-.navbar-nav .nav-link {
-  text-decoration: none;
-  color: $text-color;
-  font-family: $font-family-heading;
-  font-size: 17px;
-}
-
-.navbar-nav .nav-link:hover {
-  color: $primary-color;
-  background-color: $background-color;
-}

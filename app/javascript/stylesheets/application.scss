@@ -5,31 +5,56 @@
 // Import variables, mixins, and colors first
 @import 'color';
 
-// General styles
-:root {
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+:root{
   scroll-behavior: smooth;
+
 }
 
 body {
-  font-family: $font-family-base;
-  background: $background-color;
-  color: $text-color;
-
-  a {
-    color: $primary-color;
-    text-decoration: none;
-
-    &:hover {
-      color: $hover-color;
-    }
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: $font-family-heading;
-  }
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
-// Main section
+a {
+  color: #4154f1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #717ff5;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+}
+
+.logo {
+  line-height: 1;
+}
+
+
+
+.logo img {
+  max-height: 26px;
+  margin-right: 6px;
+}
+
+.logo span {
+  font-size: 26px;
+  font-weight: 700;
+  color: #012970;
+  font-family: "Nunito", sans-serif;
+}
+
 #main {
   margin-top: 60px;
   padding: 20px 30px;
@@ -40,161 +65,9 @@ body {
   }
 }
 
-// Page Title
-.page-title {
-  margin-bottom: 10px;
-
-  h1 {
-    font-size: 24px;
-    margin-bottom: 0;
-    font-weight: 600;
-    color: $accent-color;
-  }
-}
-
-// Back to top button
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 99999;
-  background: $primary-color;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  transition: all 0.4s;
-
-  i {
-    font-size: 24px;
-    color: $white-color;
-    line-height: 0;
-  }
-
-  &:hover {
-    background: #6776f4;
-    color: $white-color;
-  }
-
-  &.active {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-// Dropdown menus
-.dropdown-menu {
-  border-radius: 4px;
-  padding: 10px 0;
-  animation-name: dropdown-animate;
-  animation-duration: 0.2s;
-  animation-fill-mode: both;
-  border: 0;
-  box-shadow: 0 5px 30px 0 rgba(82, 63, 105, 0.2);
-
-  .dropdown-header,
-  .dropdown-footer {
-    text-align: center;
-    font-size: 15px;
-    padding: 10px 25px;
-  }
-
-  .dropdown-footer a {
-    color: $text-color;
-    text-decoration: underline;
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
-
-  .dropdown-divider {
-    color: #a5c5fe;
-    margin: 0;
-  }
-
-  .dropdown-item {
-    font-size: 14px;
-    padding: 10px 15px;
-    transition: 0.3s;
-
-    i {
-      margin-right: 10px;
-      font-size: 18px;
-      line-height: 0;
-    }
-
-    &:hover {
-      // background-color: $background-color;
-      color: $primary-color;
-    }
-  }
-
-  @media (min-width: 768px) {
-    &.dropdown-menu-arrow::before {
-      content: "";
-      width: 13px;
-      height: 13px;
-      background: #fff;
-      position: absolute;
-      top: -7px;
-      right: 20px;
-      transform: rotate(45deg);
-      border-top: 1px solid #eaedf1;
-      border-left: 1px solid #eaedf1;
-    }
-  }
-
-  @keyframes dropdown-animate {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-
-    0% {
-      opacity: 0;
-    }
-  }
-}
-
-// Card
 .card {
   margin-bottom: 30px;
   border: none;
   border-radius: 5px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
-
-  .card-header,
-  .card-footer {
-    border-color: #ebeef4;
-    background-color: $white-color;
-    color: #798eb3;
-    padding: 15px;
-  }
-
-  .card-title {
-    padding: 20px 0 15px 0;
-    font-size: 18px;
-    font-weight: 500;
-    color: $accent-color;
-    font-family: $font-family-title;
-
-    span {
-      color: #899bbd;
-      font-size: 14px;
-      font-weight: 400;
-    }
-  }
-
-  .card-body {
-    padding: 0 20px 20px 20px;
-  }
-
-  .card-img-overlay {
-    background-color: rgba(255, 255, 255, 0.6);
-  }
 }
