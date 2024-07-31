@@ -2,10 +2,12 @@
 @import 'variables';
 @import 'mixins';
 
+//Import font
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i');
+
 // Import layouts
-@import 'layouts/header';
-@import 'layouts/footer';
-@import 'layouts/navbar';
+@import 'dashboard/layouts/footer';
+@import 'dashboard/layouts/header';
 
 // Import components
 @import 'components/btn_google';

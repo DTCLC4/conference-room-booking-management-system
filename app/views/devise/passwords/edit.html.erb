@@ -4,28 +4,33 @@
       <h5 class="card-title text-center pb-0 fs-4"><%= t("pages.new_password.title") %></h5>
       <p class="text-center small"><%= t("pages.new_password.text") %></p>
     </div>
-    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: "row g-3" }) do |f| %>
-  <%= f.hidden_field :reset_password_token, value: params[:reset_password_token] %>      <div class="col-12">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: 'row g-3' }) do |f| %>
+      <%= f.hidden_field :reset_password_token, value: params[:reset_password_token] %>
+
+      <div class="col-12">
         <%= f.label :password, t('activerecord.attributes.user.password'), class: 'form-label', for: 'new-password' %>
-        <%= f.password_field :password, autocomplete: "new-password", class: 'form-control', id: 'new-password' %>
+        <%= f.password_field :password, autocomplete: 'new-password', class: 'form-control', id: 'new-password' %>
         <% if resource.errors[:password].present? %>
           <div class="error_message"><%= resource.errors.full_messages_for(:password).first %></div>
         <% end %>
       </div>
       <div class="col-12">
         <%= f.label :password_confirmation, t('activerecord.attributes.user.password_confirmation'), class: 'form-label', for: 'password_confirmation' %>
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control', id: 'password_confirmation' %>
+        <%= f.password_field :password_confirmation, autocomplete: 'new-password', class: 'form-control', id: 'password_confirmation' %>
         <% if resource.errors[:password_confirmation].present? %>
           <div class="error_message"><%= resource.errors.full_messages_for(:password_confirmation).first %></div>
         <% end %>
       </div>
       <div class="col-12">
-        <%= f.submit t("components.button.Confirm_password"),  class: "btn btn-primary w-100" %>
+        <%= f.submit t('components.button.Confirm_password'),  class: 'btn btn-primary w-100' %>
       </div>
     <% end %>
     <div class="col-12">
       <hr>
-      <p class="mb-2"><%= t('shared.account_question')%> <%= render "devise/shared/links" %></p>
+      <p class="mb-2">
+        <%= t('shared.account_question')%>
+        <%= render "devise/shared/links" %>
+      </p>
     </div>
   </div>
 </div>
