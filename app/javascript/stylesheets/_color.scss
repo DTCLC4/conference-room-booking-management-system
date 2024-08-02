@@ -1,22 +1,32 @@
-:root {
-  --background: hsl(0, 0%, 100%); /* Màu trắng */
-  --foreground: hsl(222.2, 84%, 4.9%); /* Màu xanh đậm gần như đen */
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(222.2, 84%, 4.9%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(222.2, 84%, 4.9%);
-  --primary: hsl(221.2, 83.2%, 53.3%);
-  --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(210, 40%, 96.1%);
-  --secondary-foreground: hsl(222.2, 47.4%, 11.2%);
-  --muted: hsl(210, 40%, 96.1%);
-  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
-  --accent: hsl(210, 40%, 96.1%);
-  --accent-foreground: hsl(222.2, 47.4%, 11.2%);
-  --destructive: hsl(0, 84.2%, 60.2%);
-  --destructive-foreground: hsl(210, 40%, 98%);
-  --border: hsl(214.3, 31.8%, 91.4%);
-  --input: hsl(214.3, 31.8%, 91.4%);
-  --ring: hsl(221.2, 83.2%, 53.3%);
-  --radius: 0.5rem;
-}
+ // Neutral Colors
+ $color-white: #fff;
+ $color-gray-light: #ebeef4;
+ $color-gray-medium: #777777;
+ $color-gray-dark: #444444;
+ $color-gray-dark-alt: #012970;
+ $color-gray-alt: #d3d3d4;
+ $color-gray-light-alt: #eaedf1;
+ $color-gray-border: #aab7cf;
+
+ // Blue Colors
+ $color-blue-primary: #4154f1;
+ $color-blue-secondary: #717ff5;
+ $color-blue-light: #a5c5fe;
+ $color-blue-light-alt: #cfe2ff;
+ $color-blue-background: #f6f9ff;
+ $color-blue-alt: #51678f;
+ $color-blue-border: #899bbd;
+
+ // Other Colors
+ $color-black: #2c384e;
+ $color-text-dark: #444444;
+ $color-link: #6776f4;
+ $color-link-hover: #899bbd;
+ $color-border-light: #ebeef4;
+ $color-border-dark: #798eb3;
+
+ // Additional Colors
+ $color-link-active: #717ff5;
+ $color-link-visited: #51678f;
+ $color-background-hover: #eceefe;
+ $color-placeholder: #888;
