@@ -5,30 +5,14 @@ ruby "3.0.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 
+# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+gem "sprockets-rails"
+
 # Autoload dotenv in Rails.
 gem "dotenv-rails", "~> 2.1", ">= 2.1.1"
 
-# Use webpack to manage app-like JavaScript modules in Rails
-gem "webpacker"
-
-# Provides the generator settings required for Rails to use Slim
-gem "slim", "~> 5.2", ">= 5.2.1"
-gem "slim-rails", "~> 3.6", ">= 3.6.3"
-
-# A normaliser/beautifier for HTML that also understands embedded Ruby.
-gem "htmlbeautifier", "~> 1.3", ">= 1.3.1"
-
 # IDE tools for code analysis and autocompletion
 gem "solargraph"
-
-# Flexible authentication solution for Rails with Warden
-gem "devise", "~> 4.9", ">= 4.9.4"
-
-# A set of common locale data and translations to internationalize and/or localize your Rails applications.
-gem "rails-i18n", "~> 7.0", ">= 7.0.8"
-
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
@@ -39,23 +23,20 @@ gem "puma", ">= 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
-# Hotwire"s SPA-like page accelerator [https://turbo.hotwired.dev]
+# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
-# Hotwire"s modest JavaScript framework [https://stimulus.hotwired.dev]
+# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-# A generalized Rack framework for multiple-provider authentication.
-gem "omniauth", "~> 1.6", ">= 1.6.1"
+# About Integrate React.js with Rails views and controllers, the asset pipeline, or webpacker.
+gem "react-rails"
 
-# A Google OAuth2 strategy for OmniAuth 1.x. This allows you to login to Google with your ruby app.
-gem "omniauth-google-oauth2"
-
-# Cross-Site Request Forgery on the request phrase when using OmniAuth gem with a Ruby on Rails application
-gem "omniauth-rails_csrf_protection"
+# Use webpack to manage app-like JavaScript modules in Rails
+gem "webpacker"
 
 # Middleware that will make Rack-based apps CORS compatible.
 gem "rack-cors"
@@ -87,10 +68,6 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
-  # Guard is a command line tool to easily handle events on file system modifications
-  gem "guard"
-  gem "guard-livereload", require: false
-  gem "rack-livereload"
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 

@@ -16,31 +16,6 @@ module ConferenceRoomBookingManagementSystem
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w(assets tasks))
 
-    config.middleware.insert_before 0, Rack::Cors do
-      allow do
-        origins "*"
-        resource "*", headers: :any, methods: [:get, :post, :options]
-      end
-    end
-
-    config.generators do |g|
-      g.test_framework :rspec,
-                       fixtures: true,
-                       view_specs: false,
-                       helper_specs: true,
-                       routing_specs: false,
-                       controller_specs: true,
-                       request_specs: false
-      g.fixture_replacement :factory_bot, dir: "spec/factories"
-    end
-
-    config.after_initialize do
-      Rails.application.routes.append do
-        get "*unmatched_route", to: "errors#not_found"
-      end
-    end
-
-    config.exceptions_app = self.routes
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
@@ -48,11 +23,5 @@ module ConferenceRoomBookingManagementSystem
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-
-    # Set the available locales
-    config.i18n.available_locales = [:en, :vi, :ja]
-
-    # Set the default locale
-    config.i18n.default_locale = :vi
   end
 end
