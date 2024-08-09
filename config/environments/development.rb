@@ -6,8 +6,6 @@ Rails.application.configure do
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
-  config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
-
   config.enable_reloading = true
 
   # Do not eager load code on boot.
@@ -27,7 +25,7 @@ Rails.application.configure do
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      "Cache-Control" => "public, max-age=#{2.days.to_i}",
+      "Cache-Control" => "public, max-age=#{2.days.to_i}"
     }
   else
     config.action_controller.perform_caching = false
@@ -75,15 +73,4 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true
-
-  config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    user_name: ENV["SMTP_USERNAME"],
-    password: ENV["SMTP_PASSWORD"],
-    address: ENV["SMTP_ADDRESS"],
-    port: ENV["SMTP_PORT"],
-    authentication: ENV["SMTP_AUTHENTICATION"].to_sym,
-    enable_starttls_auto: ENV["SMTP_ENABLE_STARTTLS_AUTO"] == "true",
-  }
 end
