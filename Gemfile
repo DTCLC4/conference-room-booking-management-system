@@ -41,6 +41,20 @@ gem "webpacker"
 # Middleware that will make Rack-based apps CORS compatible.
 gem "rack-cors"
 
+# Flexible authentication solution for Rails with Warden
+gem "devise"
+
+# A set of common locale data and translations to internationalize and/or localize your Rails applications.
+gem "rails-i18n"
+
+# A generalized Rack framework for multiple-provider authentication.
+gem "omniauth"
+
+# A Google OAuth2 strategy for OmniAuth 1.x. This allows you to login to Google with your ruby app.
+gem "omniauth-google-oauth2"
+
+# Cross-Site Request Forgery on the request phrase when using OmniAuth gem with a Ruby on Rails application
+gem "omniauth-rails_csrf_protection"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
