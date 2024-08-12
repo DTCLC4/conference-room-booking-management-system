@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'd46e2cbda437e61b11f6e99705a63999c35c32c79de60deb46644c3a45e1417685510dac726b95fd9a96b642dbc0302344f1bd0bdb79cd113a58f4278ab91c23'
+  # config.secret_key = '6a87309daf485cb79f0eb21396cfcddd8f8a886149f04124b3200d9a7289c70dd6258cf0cad6e8fbc8fecdf2ae78df531db2c5034439264b74a7dae0ee6d34f6'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -24,7 +24,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = "noreply@bookingapp.com"
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -126,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'd31cf47d0ba3fabbeb0ac3ee71d3cc8f9f0c61f0e938356fed1322b642e5d7d0cf568771ad1975b89c11a7c9e9b155cdba2505dd24d53040ff6af6e84bd5e41c'
+  # config.pepper = '5f692b42e9b409fcc7c2b5cea883df68a3cdf734431758b16e6ab73c948184f077ce199617377d6f5272107dcc20b1be088ccca98d2eaf06c98ecd965b29d304'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -268,20 +268,9 @@ Devise.setup do |config|
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
 
-# ==> OmniAuth
+  # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  config.omniauth :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"], {
-    scope: "email,profile,https://www.googleapis.com/auth/userinfo.profile,https://www.googleapis.com/auth/userinfo.email",
-    prompt: "select_account",
-    image_aspect_ratio: "square",
-    image_size: 50,
-    redirect_uri: "http://127.0.0.1:3000/users/auth/google_oauth2/callback",
-    setup: ->(env) {
-      request = Rack::Request.new(env)
-      Rails.logger.debug "OAuth Request: #{request.inspect}"
-    },
-  }
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
   # ==> Warden configuration
