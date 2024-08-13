@@ -10,11 +10,15 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import Home from '../components/Home';
+import LoginForm from '../components/LoginForm';
+import RegisterForm from '../components/RegisterForm';
 
 const App = () => (
 	<Router>
 		<Routes>
 			<Route path="/" element={<Home />} />{' '}
+			<Route path="login" element={<LoginForm />} />{' '}
+			<Route path="register" element={<RegisterForm />} />{' '}
 		</Routes>
 	</Router>
 );
