@@ -3,19 +3,29 @@ source "https://rubygems.org"
 ruby "3.0.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.3", ">= 7.1.3.2"
+gem "rails", "~> 7.1.3", ">= 7.1.3.4"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+#Pg is the Ruby interface to the PostgreSQL RDBMS. It works with PostgreSQL 9.3 and later.
+gem 'pg', '~> 1.5', '>= 1.5.6'
+
 # Autoload dotenv in Rails.
 gem "dotenv-rails", "~> 2.1", ">= 2.1.1"
 
-# IDE tools for code analysis and autocompletion
-gem "solargraph"
+# Use webpack to manage app-like JavaScript modules in Rails
+gem "webpacker"
 
-# Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
+# Render components in views or controller actions.
+#Server-side rendering powered by ExecJS. Transform JSX in the asset pipeline or use Shakapacker.
+gem "react-rails"
+
+# Flexible authentication solution for Rails with Warden
+gem "devise"
+
+# A Google OAuth2 strategy for OmniAuth 1.x. This allows you to login to Google with your ruby app.
+gem "omniauth-google-oauth2"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
@@ -32,29 +42,12 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-# About Integrate React.js with Rails views and controllers, the asset pipeline, or webpacker.
-gem "react-rails"
-
-# Use webpack to manage app-like JavaScript modules in Rails
-gem "webpacker"
-
 # Middleware that will make Rack-based apps CORS compatible.
 gem "rack-cors"
 
-# Flexible authentication solution for Rails with Warden
-gem "devise"
+# For use with client side single page apps such as the venerable https://github.com/lynndylanhurley/ng-token-auth.
+gem "devise_token_auth"
 
-# A set of common locale data and translations to internationalize and/or localize your Rails applications.
-gem "rails-i18n"
-
-# A generalized Rack framework for multiple-provider authentication.
-gem "omniauth"
-
-# A Google OAuth2 strategy for OmniAuth 1.x. This allows you to login to Google with your ruby app.
-gem "omniauth-google-oauth2"
-
-# Cross-Site Request Forgery on the request phrase when using OmniAuth gem with a Ruby on Rails application
-gem "omniauth-rails_csrf_protection"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -62,10 +55,10 @@ gem "omniauth-rails_csrf_protection"
 # gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-gem "bcrypt", "~> 3.1.7"
+# gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: [:mswin, :mswin64, :mingw, :x64_mingw, :jruby]
+gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -75,7 +68,7 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: [:mswin, :mswin64, :mingw, :x64_mingw, :jruby]
+  gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
 end
 
 group :development do
@@ -86,7 +79,7 @@ group :development do
   # gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  gem "spring"
+  # gem "spring"
 end
 
 group :test do
