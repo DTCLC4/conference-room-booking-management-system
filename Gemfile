@@ -5,8 +5,11 @@ ruby "3.0.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.4"
 
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
+# Use sqlite3 as the database for Active Record
+gem "sqlite3", "~> 1.4"
+
+# Use the Puma web server [https://github.com/puma/puma]
+gem "puma", ">= 5.0"
 
 #Pg is the Ruby interface to the PostgreSQL RDBMS. It works with PostgreSQL 9.3 and later.
 gem 'pg', '~> 1.5', '>= 1.5.6'
@@ -14,39 +17,11 @@ gem 'pg', '~> 1.5', '>= 1.5.6'
 # Autoload dotenv in Rails.
 gem "dotenv-rails", "~> 2.1", ">= 2.1.1"
 
-# Use webpack to manage app-like JavaScript modules in Rails
-gem "webpacker"
-
-# Render components in views or controller actions.
-#Server-side rendering powered by ExecJS. Transform JSX in the asset pipeline or use Shakapacker.
-gem "react-rails"
-
-# Flexible authentication solution for Rails with Warden
-gem "devise"
-
-# A Google OAuth2 strategy for OmniAuth 1.x. This allows you to login to Google with your ruby app.
-gem "omniauth-google-oauth2"
-
-# Use the Puma web server [https://github.com/puma/puma]
-gem "puma", ">= 5.0"
-
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
-
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
-
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails"
-
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
-
-# Middleware that will make Rack-based apps CORS compatible.
+# Middleware that will make Rack-based apps CORS compatible. Fork the project here: https://github.com/cyu/rack-cors
 gem "rack-cors"
 
-# For use with client side single page apps such as the venerable https://github.com/lynndylanhurley/ng-token-auth.
-gem "devise_token_auth"
+# Build JSON APIs with ease [https://github.com/rails/jbuilder]
+# gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -66,18 +41,15 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
+# gem "rack-cors"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
 end
 
 group :development do
-  # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem "web-console"
-
-  # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
-
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
@@ -104,4 +76,5 @@ group :test do
 
   # rspec-rails is a testing framework for Rails 5+.
   gem "rspec-rails", "~> 6.0.0"
+  gem "rspec-core"
 end
