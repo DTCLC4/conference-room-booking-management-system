@@ -29,21 +29,9 @@
 !/tmp/storage/
 !/tmp/storage/.keep
 
+/public/assets
+
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-/config/database.yml
-/config/credentials.yml.enc
-config/settings.local.yml
-config/settings/*.local.yml
-config/environments/*.local.yml
-
-# Ignore file CI-CD
-.framgia-ci-reports/
-.framgia-ci-result.temp.yml
-
-# Ignore file debug
-.byebug_history
-
-coverage
-
-.idea
+credentials.yml.enc
+database.yml
