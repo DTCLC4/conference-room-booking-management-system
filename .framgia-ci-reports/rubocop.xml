@@ -1,4 +1,0 @@
-<?xml version='1.0'?>
-<checkstyle>
-  <file name='app/channels/application_cable/channel.rb'/>
-</checkstyle>

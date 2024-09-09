@@ -29,6 +29,12 @@ gem "jbuilder"
 # Autoload dotenv in Rails [https://github.com/bkeepers/dotenv]
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 
+#Render components in views or controller actions. Server-side rendering powered by ExecJS [https://github.com/reactjs/react-rails]
+gem 'react-rails', '~> 2.6', '>= 2.6.1'
+
+# Use Webpack to manage app-like JavaScript modules in Rails [https://github.com/rails/webpacker]
+gem 'webpacker'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
