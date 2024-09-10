@@ -29,15 +29,9 @@
 !/tmp/storage/
 !/tmp/storage/.keep
 
-/public/assets
-
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 credentials.yml.enc
 
 # Ignore information database
 database.yml
-
-# Ignore results spec
-.framgia-ci-reposrts
-.coverage
