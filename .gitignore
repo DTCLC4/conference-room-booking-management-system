@@ -35,3 +35,10 @@ credentials.yml.enc
 
 # Ignore information database
 database.yml
+
+# Ignore test results
+coverage
+.framgia-ci-reports
+
+# Ignore vite
+.vite
