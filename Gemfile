@@ -29,11 +29,13 @@ gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 # Byebug is a Ruby debugger.
 gem 'byebug', '~> 11.1', '>= 11.1.3'
 
-# Flexible authentication solution for Rails with Warden
+# Flexible authentication solution for Rails with Warden [https://github.com/heartcombo/devise]
 gem 'devise'
 
+# JWT authentication for devise with configurable token revocation strategies [https://github.com/waiting-for-dev/devise-jwt]
 gem 'devise-jwt'
 
+# Fast, simple and easy to use JSON:API serialization library (also known as fast_jsonapi) [https://github.com/jsonapi-serializer/jsonapi-serializer]
 gem 'jsonapi-serializer'
 
 # Use Redis adapter to run Action Cable in production
@@ -54,9 +56,6 @@ gem 'bootsnap', require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem 'image_processing', '~> 1.2'
 
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
-# gem 'rack-cors'
-
 group :development, :test do
   gem 'rubocop', '~> 1.26', require: false
   gem 'rubocop-checkstyle_formatter', require: false
@@ -76,9 +75,12 @@ group :development, :test do
    # For easier model testing
    gem 'shoulda-matchers', '~> 5.0'
 
-   # Rcov style formatter for SimpleCov
+   # Rcov style formatter for SimpleCov [https://github.com/simplecov-ruby/simplecov]
    gem 'simplecov-rcov'
    gem 'simplecov'
+
+  # An XML toolkit for Ruby [https://github.com/ruby/rexml]
+   gem 'rexml'
 end
 
 group :development do

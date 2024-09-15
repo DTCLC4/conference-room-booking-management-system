@@ -1,52 +1,125 @@
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*, *::before, *::after {
-  box-sizing: border-box;
+/* Root styles */
+:root {
+	scroll-behavior: smooth; /* Smooth scrolling for the entire page */
 }
 
-/*
-  2. Remove default margin
-*/
-* {
-  margin: 0;
-}
-
-/*
-  Typographic tweaks!
-  3. Add accessible line-height
-  4. Improve text rendering
-*/
+/* Body styles */
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+	font-family: 'Open Sans', sans-serif; /* Default font for body */
+	background: #f6f9ff; /* Light background color */
+	color: #444444; /* Default text color */
 }
 
-/*
-  5. Improve media defaults
-*/
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+/* Link styles */
+a {
+	color: #4154f1; /* Default link color */
+	text-decoration: none !important; /* Removes underline from links */
 }
 
-/*
-  6. Remove built-in form typography styles
-*/
-input, button, textarea, select {
-  font: inherit;
+a:hover {
+	color: #717ff5; /* Link hover color */
+	text-decoration: none; /* Keeps underline removed on hover */
 }
 
-/*
-  7. Avoid text overflows
-*/
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
+/* Heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Nunito', sans-serif; /* Font family for all heading elements */
 }
 
-/*
-  8. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
+/* Input field styles */
+input {
+	box-shadow: none !important; /* Removes shadow from input fields */
+}
+
+/* Main container styles */
+#main {
+	margin-top: 60px; /* Space above the main container */
+	padding: 20px 30px; /* Padding inside the main container */
+	transition: all 0.3s; /* Smooth transition for changes */
+}
+
+/* Main container padding for small screens */
+@media (max-width: 1199px) {
+	#main {
+		padding: 20px; /* Reduces padding for smaller screens */
+	}
+}
+
+/* Logo styles */
+.logo {
+	line-height: 1; /* Adjusts the line height of the logo */
+}
+
+/* Logo width for large screens */
+@media (min-width: 1200px) {
+	.logo {
+		width: 280px; /* Sets logo width for screens larger than 1200px */
+	}
+}
+
+/* Logo image styles */
+.logo img {
+	max-height: 26px; /* Limits the height of the logo image */
+	margin-right: 6px; /* Space between logo image and text */
+}
+
+/* Logo text styles */
+.logo span {
+	font-size: 26px; /* Font size for the logo text */
+	font-weight: 700; /* Bold font for the logo text */
+	color: #012970; /* Text color */
+	font-family: 'Nunito', sans-serif; /* Font family for the logo text */
+}
+
+/* Card styles */
+.card {
+	margin-bottom: 30px; /* Space below each card */
+	border: none !important; /* Removes default card border */
+	border-radius: 5px; /* Rounds card corners */
+	box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1); /* Adds shadow to the card */
+}
+
+/* Card header and footer styles */
+.card-header,
+.card-footer {
+	border-color: #ebeef4; /* Light border color */
+	background-color: #fff; /* White background */
+	color: #798eb3; /* Text color */
+	padding: 15px; /* Padding inside the header/footer */
+}
+
+/* Card title styles */
+.card-title {
+	padding: 20px 0 15px 0; /* Padding around the title */
+	font-size: 18px; /* Title font size */
+	font-weight: 500; /* Semi-bold font */
+	color: #012970 !important; /* Title text color */
+	font-family: 'Poppins', sans-serif; /* Title font family */
+}
+
+/* Card subtitle styles */
+.card-title span {
+	color: #899bbd; /* Subtitle text color */
+	font-size: 14px; /* Subtitle font size */
+	font-weight: 400; /* Regular font weight for subtitle */
+}
+
+/* Card body styles */
+.card-body {
+	padding: 0 20px 20px 20px; /* Padding for card content */
+}
+
+/* Card overlay image styles */
+.card-img-overlay {
+	background-color: rgba(
+		255,
+		255,
+		255,
+		0.6
+	); /* Semi-transparent white overlay on images */
 }
