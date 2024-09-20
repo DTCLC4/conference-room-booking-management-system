@@ -1,0 +1,21 @@
+body {
+  // Sets the background color of the body to a variable defined in CSS, allowing for easy theme changes.
+  background-color: var(--cui-tertiary-bg);
+}
+
+.wrapper {
+  // Sets the width of the wrapper to 100%, making it span the entire width of its container.
+  width: 100%;
+
+  // Applies padding to the left and right based on the sidebar's occupancy.
+  // The `@include ltr-rtl` mixin handles left-to-right and right-to-left layouts.
+  // The padding values are derived from CSS variables that may default to 0 if not defined.
+  @include ltr-rtl("padding-left", var(--cui-sidebar-occupy-start, 0));
+  @include ltr-rtl("padding-right", var(--cui-sidebar-occupy-end, 0));
+
+  // Indicates that the element may change in size or layout, which can optimize rendering performance.
+  will-change: auto;
+
+  // Applies a transition effect on the padding property, making it smoothly change over 0.15 seconds.
+  @include transition(padding .15s);
+}
