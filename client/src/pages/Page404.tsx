@@ -6,10 +6,10 @@ import {
   CInputGroup,
   CInputGroupText,
   CRow,
-} from '@coreui/react' // Importing CoreUI components for layout and styling
-import CIcon from '@coreui/icons-react' // Importing CoreUI icon component
-import { cilMagnifyingGlass, cilArrowLeft } from '@coreui/icons' // Importing specific icons for use
-import { useNavigate } from 'react-router-dom' // Importing navigation hook from react-router-dom
+} from '@coreui/react'
+import CIcon from '@coreui/icons-react'
+import { cilMagnifyingGlass, cilArrowLeft } from '@coreui/icons'
+import { useNavigate } from 'react-router-dom'
 
 const Page404 = () => {
   const navigate = useNavigate() // Hook to programmatically navigate to different routes

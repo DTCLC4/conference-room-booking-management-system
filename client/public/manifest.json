@@ -1,6 +1,6 @@
 {
-  "short_name": "Conference room booking management system",
-  "name": "Conference room booking management system sample",
+  "short_name": "CoreUI-React",
+  "name": "CoreUI-React sample",
   "icons": [
     {
       "src": "./assets/img/favicon.png",

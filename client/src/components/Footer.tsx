@@ -2,7 +2,7 @@
 import { CFooter } from '@coreui/react'
 import React from 'react'
 
-const AppFooter = () => {
+const AppFooter: React.FC = () => {
   return (
     // stye = {{padding: '0 16px'}}
     <CFooter className="px-4">
