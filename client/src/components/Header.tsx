@@ -1,65 +1,51 @@
-import React, { useEffect, useRef } from 'react'
-import {
-  CHeader,
-  CContainer,
-  CHeaderToggler,
-  CHeaderNav,
-  CNavItem,
-  CNavLink,
-  CDropdown,
-  CDropdownToggle,
-  CDropdownMenu,
-  CDropdownItem,
-  useColorModes,
-  CForm,
-  CFormInput,
-  CInputGroup,
-  CBadge,
-} from '@coreui/react'
+import { cilBell, cilContrast, cilEnvelopeOpen, cilList, cilMenu, cilMoon, cilSearch, cilSun } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
-import {
-  cilMenu,
-  cilBell,
-  cilList,
-  cilEnvelopeOpen,
-  cilSun,
-  cilContrast,
-  cilMoon,
-  cilSearch,
-} from '@coreui/icons'
-import { AppHeaderDropdown } from './header'
+import { CBadge, CContainer, CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CForm, CFormInput, CHeader, CHeaderNav, CHeaderToggler, CInputGroup, CNavItem, CNavLink, useColorModes } from '@coreui/react'
+import { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import HeaderDropdown from './header/HeaderDropdown'
+import { RootState } from '../store'
 import { set } from '../appSlice'
 
-const AppHeader = () => {
-  const headerRef = useRef() // Ref to access the header element for scroll effect
-  const { colorMode, setColorMode } = useColorModes('coreui-free-react-admin-template-theme') // Get and manage the color mode (light, dark, auto)
+const Header: React.FC = () => {
 
-  const dispatch = useDispatch() // Hook to dispatch actions to Redux store
-  const sidebarShow = useSelector((state) => state.app.sidebarShow) // Get the current sidebar state from the Redux store
+  const headerRef = useRef<HTMLDivElement>(null)
+
+  const { colorMode, setColorMode } = useColorModes('coreui-free-react-admin-template-theme')
+
+  const dispatch = useDispatch();
+
+  const sidebarShow = useSelector((state: RootState) => state.app.sidebarShow)
 
   useEffect(() => {
-    // Add a scroll event listener to toggle shadow class on the header when scrolling
-    document.addEventListener('scroll', () => {
-      headerRef.current && // Check if headerRef is defined
-        headerRef.current.classList.toggle('shadow-sm', document.documentElement.scrollTop > 0) // Toggle shadow if scrolled
-    })
-  }, []) // Empty dependency array ensures this effect runs only once on mount
+    const handleScroll = () => {
+      if (headerRef.current) {
+        headerRef.current.classList.toggle('shadow-sm', document.documentElement.scrollTop > 0);
+      }
+    };
+
+    document.addEventListener('scroll', handleScroll);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <CHeader position="sticky" className="mb-4 p-0" ref={headerRef}>
+    < CHeader position="sticky" className="mb-4 p-0" ref={headerRef}>
       {/* Sticky positioned header with margin bottom and no padding */}
-      <CContainer className="border-bottom px-4" fluid>
+      < CContainer className="border-bottom px-4" fluid >
         {/* Full-width fluid container with border at the bottom and padding-x */}
         <CHeaderToggler
-          onClick={() => dispatch(set({ sidebarShow: !sidebarShow }))} // Dispatch Redux action to toggle sidebar visibility
-          style={{ marginInlineStart: '-14px' }} // Inline style to adjust left margin
+          onClick={() => dispatch(set({ sidebarShow: !sidebarShow }))}
+          style={{ marginInlineStart: '-14px' }}
         >
           <CIcon icon={cilMenu} size="lg" /> {/* Menu icon for toggling sidebar */}
-        </CHeaderToggler>
+        </CHeaderToggler >
 
         {/* Search form for desktop view */}
-        <CHeaderNav className="d-none d-md-flex">
+        < CHeaderNav className="d-none d-md-flex" >
           {/* Hide search form on small screens (d-none), show on medium and larger screens (d-md-flex) */}
           <CForm>
             <CInputGroup>
@@ -77,14 +63,14 @@ const AppHeader = () => {
                 aria-describedby="search-addon" // Describes the input group (search)
               />
             </CInputGroup>
-          </CForm>
-        </CHeaderNav>
+          </CForm >
+        </CHeaderNav >
 
         {/* Notification and message icons on the right side of the header */}
-        <CHeaderNav className="ms-auto">
+        < CHeaderNav className="ms-auto" >
           {/* Right-aligned header navigation (ms-auto) */}
           <CNavItem>
-            <CNavLink href="javascript:void(0);">
+            <CNavLink href="#">
               {/* Link for notifications */}
               <span className="d-inline-block my-1 mx-2 position-relative">
                 <CIcon icon={cilBell} size="lg" /> {/* Notification bell icon */}
@@ -99,11 +85,11 @@ const AppHeader = () => {
                 </CBadge>
               </span>
             </CNavLink>
-          </CNavItem>
+          </CNavItem >
 
           {/* List icon for additional notifications */}
           <CNavItem>
-            <CNavLink href="javascript:void(0);">
+            <CNavLink href="#">
               <span className="d-inline-block my-1 mx-2 position-relative">
                 <CIcon icon={cilList} size="lg" /> {/* List icon for notifications */}
                 <CBadge
@@ -116,11 +102,11 @@ const AppHeader = () => {
                 </CBadge>
               </span>
             </CNavLink>
-          </CNavItem>
+          </CNavItem >
 
           {/* Envelope icon for unread messages */}
           <CNavItem>
-            <CNavLink href="javascript:void(0);">
+            <CNavLink href="#">
               <span className="d-inline-block my-1 mx-2 position-relative">
                 <CIcon icon={cilEnvelopeOpen} size="lg" /> {/* Envelope icon for unread messages */}
                 <CBadge
@@ -133,8 +119,8 @@ const AppHeader = () => {
                 </CBadge>
               </span>
             </CNavLink>
-          </CNavItem>
-        </CHeaderNav>
+          </CNavItem >
+        </CHeaderNav >
 
         {/* Color mode toggle (light, dark, auto) and user profile dropdown */}
         <CHeaderNav>
@@ -144,7 +130,6 @@ const AppHeader = () => {
           {/* Dropdown for switching color modes */}
           <CDropdown variant="nav-item" placement="bottom-end">
             <CDropdownToggle caret={false}>
-              {/* Show the appropriate icon based on the current color mode */}
               {colorMode === 'dark' ? (
                 <CIcon icon={cilMoon} size="lg" /> // Moon icon for dark mode
               ) : colorMode === 'auto' ? (
@@ -190,14 +175,14 @@ const AppHeader = () => {
             <div className="vr h-100 mx-2 tex-body text-opacity-75"></div>
           </li>
           {/* User profile dropdown */}
-          <AppHeaderDropdown /> {/* Custom component for user profile and settings */}
-        </CHeaderNav>
-      </CContainer>
+          <HeaderDropdown />
+        </CHeaderNav >
+      </CContainer >
 
       {/* Empty container for additional elements or spacing */}
-      <CContainer className="px-4"></CContainer>
-    </CHeader>
+      <CContainer className="px-4" ></CContainer >
+    </CHeader >
+
   )
 }
-
-export default React.memo(AppHeader) // Use React.memo to prevent unnecessary re-renders of the header
+export default Header

@@ -1,5 +1,4 @@
 body {
-  // Sets the background color of the body to a variable defined in CSS, allowing for easy theme changes.
   background-color: var(--cui-tertiary-bg);
 }
 
@@ -19,14 +18,26 @@ body {
   // Applies a transition effect on the padding property, making it smoothly change over 0.15 seconds.
   @include transition(padding .15s);
 }
-
-.header>.container-fluid,
+.header > .container-fluid,
 .sidebar-header {
-  min-height: calc(4rem + 1px);
+  min-height: calc(4rem + 1px); // stylelint-disable-line function-disallowed-list
 }
 
 .sidebar-brand-full {
   margin-left: 3px;
+}
+
+.sidebar-header {
+  .nav-underline-border {
+    --cui-nav-underline-border-link-padding-x: 1rem;
+    --cui-nav-underline-border-gap: 0;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    min-height: calc(4rem + 1px); // stylelint-disable-line function-disallowed-list
+  }
 }
 
 .sidebar-toggler {
@@ -40,7 +51,7 @@ body {
   }
 }
 
-.header>.container-fluid+.container-fluid {
+.header > .container-fluid + .container-fluid {
   min-height: 3rem;
 }
 
