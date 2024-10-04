@@ -38,6 +38,9 @@ gem 'devise-jwt'
 # Fast, simple and easy to use JSON:API serialization library (also known as fast_jsonapi) [https://github.com/jsonapi-serializer/jsonapi-serializer]
 gem 'jsonapi-serializer'
 
+# IDE tools for code analysis and autocompletion [https://github.com/castwide/solargraph]
+gem 'solargraph'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '>= 4.0.1'
 
