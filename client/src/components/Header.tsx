@@ -3,9 +3,9 @@ import CIcon from '@coreui/icons-react'
 import { CBadge, CContainer, CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle, CForm, CFormInput, CHeader, CHeaderNav, CHeaderToggler, CInputGroup, CNavItem, CNavLink, useColorModes } from '@coreui/react'
 import { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import HeaderDropdown from './header/HeaderDropdown'
 import { RootState } from '../store'
 import { set } from '../appSlice'
+import { HeaderDropdown } from './header'
 
 const Header: React.FC = () => {
 
