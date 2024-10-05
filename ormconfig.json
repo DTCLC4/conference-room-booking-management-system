@@ -1,0 +1,10 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "postgres",
+  "password": "Acer@123456",
+  "database": "conference_room_booking_management_system_development",
+  "entities": ["src/models/**/*.ts"],
+  "synchronize": true
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
 const Content: React.FC = () => {
   const [data, setData] = useState<string | null>(null);
@@ -22,4 +22,4 @@ const Content: React.FC = () => {
   );
 }
 
-export default Content
+export default Content;
