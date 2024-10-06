@@ -1,31 +1,25 @@
-# See https://docs.docker.com/engine/reference/builder/#dockerignore-file for more about ignoring files.
+# Node modules
+node_modules
+npm-debug.log
+yarn-error.log
 
-# Ignore git directory.
-/.git/
+# TypeScript output
+dist
+build
 
-# Ignore bundler config.
-/.bundle
+# Environment files
+.env
 
-# Ignore all environment files (except templates).
-/.env*
-!/.env*.erb
+# Logs
+logs
+*.log
 
-# Ignore all default key files.
-/config/master.key
-/config/credentials/*.key
+# Docker files
+Dockerfile
+docker-compose.yml
 
-# Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
-
-# Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/.keep
-
-# Ignore storage (uploaded files in development and any SQLite databases).
-/storage/*
-!/storage/.keep
-/tmp/storage/*
-!/tmp/storage/.keep
+# IDE and Editor files
+.vscode
+.idea
+*.swp
+*~
