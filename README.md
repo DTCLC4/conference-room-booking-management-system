@@ -1,24 +1,45 @@
-# README
+# Node.js Express.js TypeScript API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is a RESTful API built with Node.js, Express.js, and TypeScript. It serves as a boilerplate for developing scalable and maintainable backend applications.
 
-Things you may want to cover:
+## Table of Contents
 
-* Ruby version
+- [Features](#features)
+- [Technologies](#technologies)
+- [Getting Started](#getting-started)
+- [API Endpoints](#api-endpoints)
+- [Database Setup](#database-setup)
+- [Running the Application](#running-the-application)
+- [Scripts](#scripts)
+- [License](#license)
 
-* System dependencies
+## Features
 
-* Configuration
+- RESTful API design
+- TypeScript for type safety
+- Express.js for routing and middleware
+- Easy integration with databases (e.g., PostgreSQL, MongoDB)
+- Swagger documentation for API endpoints (optional)
 
-* Database creation
+## Technologies
 
-* Database initialization
+- **Node.js**: JavaScript runtime built on Chrome's V8 JavaScript engine.
+- **Express.js**: Fast, unopinionated, minimalist web framework for Node.js.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **TypeORM**: An ORM for TypeScript and JavaScript (ES7, ES6, ES5).
+- **Swagger**: API documentation tool (optional).
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+### Prerequisites
 
-* Deployment instructions
+Make sure you have the following installed:
 
-* ...
+- Node.js (>= 14.x)
+- npm (Node Package Manager) or yarn
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/DTCLC4/Conference-room-booking-management-system
+```
