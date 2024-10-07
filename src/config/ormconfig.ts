@@ -34,7 +34,7 @@ const config: DataSourceOptions = {
   entities: ["src/entity/*.ts"],
 
   // Specify the location of migration files
-  migrations: ["src/migrations/*.ts"],
+  migrations: ["src/db/migrations/*.ts"],
 
   // Subscribers are event listeners for entities (not used here)
   subscribers: [],
