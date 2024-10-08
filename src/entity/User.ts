@@ -1,20 +1,21 @@
-// src/entity/User.ts
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import { AuthProvider } from './AuthProvider';
+import { Role } from './Role';
 
-@Entity("users")
+@Entity()
 export class User {
-    @PrimaryGeneratedColumn()
-    id!: number;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column()
-    username!: string;
+  @Column()
+  email: string;
 
-    @Column()
-    password!: string;
+  @Column({ nullable: true })
+  password: string;
 
-    @Column({ nullable: true })
-    email?: string;
+  @OneToMany(() => AuthProvider, (authProvider) => authProvider.user)
+  authProviders: AuthProvider[];
 
-    @Column({ default: true })
-    isActive: boolean = true;
+  @OneToMany(() => Role, (role) => role.user)
+  roles: Role[];
 }
