@@ -1,13 +1,16 @@
-import express, { Request, Response } from 'express';
-import cors from 'cors';
+import express, { Request, Response } from 'express'
+import cors from 'cors'
 
-const app = express();
+const app = express()
 
-const port = 3000;
+const port = 3000
 
-// Middleware
-app.use(cors());
+// Middleware to enable Cross-Origin Resource Sharing (CORS)
+// This allows the server to handle requests from different origins
+app.use(cors())
 
+// Start the server and listen on the specified port
+// The server will log a message when it's running
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
+  console.log(`Server running on http://localhost:${port}`)
+})
