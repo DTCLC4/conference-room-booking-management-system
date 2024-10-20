@@ -1,19 +1,19 @@
-import { DataSourceOptions } from "typeorm";
-import * as dotenv from 'dotenv';
+import { DataSourceOptions } from 'typeorm'
+import * as dotenv from 'dotenv'
 
 // Load environment variables from a .env file into process.env
-dotenv.config();
+dotenv.config()
 
 // Define the configuration for the TypeORM data source
 const config: DataSourceOptions = {
   // Specify the database type (PostgreSQL in this case)
-  type: "postgres",
+  type: 'postgres',
 
   // Host address of the database server
   host: process.env.DB_HOST,
 
   // Port number on which the database server is listening
-  port: parseInt(process.env.DB_PORT || "5432"),
+  port: parseInt(process.env.DB_PORT || '5432'),
 
   // Database user for authentication
   username: process.env.DB_USERNAME,
@@ -31,14 +31,14 @@ const config: DataSourceOptions = {
   logging: true,
 
   // Specify the location of entity files for TypeORM
-  entities: ["src/entity/*.ts"],
+  entities: ['src/entity/*.ts'],
 
   // Specify the location of migration files
-  migrations: ["src/db/migrations/*.ts"],
+  migrations: ['src/db/migrations/*.ts'],
 
   // Subscribers are event listeners for entities (not used here)
   subscribers: [],
-};
+}
 
 // Export the configuration object for use in other parts of the application
-export default config;
+export default config
