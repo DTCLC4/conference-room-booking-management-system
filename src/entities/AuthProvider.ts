@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToMany, OneToMany, CreateDateColumn, UpdateDateColumn, JoinTable, ManyToOne } from 'typeorm'
 import { User } from './User'
 
-// This decorator marks the class as a database entity in TypeORM
+// // Marks this class as a TypeORM entity, mapping it to the "auth_provider" table in the database
 @Entity()
 export class AuthProvider {
 

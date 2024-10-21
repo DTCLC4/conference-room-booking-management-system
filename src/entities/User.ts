@@ -11,11 +11,11 @@ export class User {
   id: string
 
   // Unique constraint ensures that each username is distinct in the system
-  @Column({ unique: true })
+  @Column()
   // The user's chosen username
   username: string
 
-   // Column to store the user's password. It should be hashed before storing.
+  // Column to store the user's password. It should be hashed before storing
   @Column()
   // Store hashed password.
   password: string
@@ -26,14 +26,25 @@ export class User {
   email: string
 
   // Default value is true indicates whether the user account is active
-  @Column({ default: true })
-   // If the user account is active.
+  @Column({ default: false })
+  // If the user account is active.
   isActive: boolean
 
   // Nullable field for tracking the last login timestamp
   @Column({ nullable: true })
-   // Last login timestamp.
+  // Last login timestamp.
   lastLogin: Date
+
+  // Indicates whether the user's email has been verified, default is false (not verified)
+  @Column({ default: false })
+  isVerified: boolean
+
+  @Column({ type: 'varchar', nullable: true })
+  verificationToken: string | null
+
+  // Stores the URL or path to the user's profile image
+  @Column({ nullable: true })
+  profileImage: string
 
   // Defines a Many-to-Many relationship with the Role entity
   @ManyToMany(() => Role, (role) => role.users)
@@ -47,7 +58,7 @@ export class User {
   // A user can have multiple authentication providers linked to their account
   authProviders: AuthProvider[]
 
-   // Automatically stores the timestamp when a user record is created
+  // Automatically stores the timestamp when a user record is created
   @CreateDateColumn()
   createdAt: Date
 

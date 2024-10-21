@@ -9,12 +9,15 @@ dotenv.config()
 
 // Define JWT Strategy options
 const opts: StrategyOptions = {
-  jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(), // Extract token from Bearer authorization header
-  secretOrKey: process.env.JWT_SECRET || '', // Ensure secret is taken from env variables
+  // Extract token from Bearer authorization header
+  jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+  // Ensure secret is taken from env variables
+  secretOrKey: process.env.JWT_SECRET || '',
 }
 
 interface JwtPayload {
-  id: string // Use string as User ID is a UUID
+  // Use string as User ID is a UUID
+  id: string
 }
 
 // Configure Passport JWT Strategy
@@ -27,13 +30,17 @@ passport.use(
       const user = await userRepository.findOne({ where: { id: jwtPayload.id } })
 
       if (user) {
-        return done(null, user) // Pass user to request if found
+        // Pass user to request if found
+        return done(null, user)
       } else {
-        return done(null, false) // Pass false if no user is found (unauthorized)
+        // Pass false if no user is found (unauthorized)
+        return done(null, false)
       }
     } catch (error) {
-      console.error('Error during JWT authentication:', error) // Log any error
-      return done(error, false) // Pass error if any occurred during lookup
+      // Log any error
+      console.error('Error during JWT authentication:', error)
+      // Pass error if any occurred during lookup
+      return done(error, false)
     }
   })
 )

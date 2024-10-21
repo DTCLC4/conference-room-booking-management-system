@@ -5,8 +5,8 @@ import { AppDataSource } from '../data-source'
 
 const seedDatabase = async () => {
   // Initializing the data source, establishing a connection to the database
-  await AppDataSource.initialize();
-};
+  await AppDataSource.initialize()
+}
 
 seedDatabase()
   // On successful seeding, log the success message
@@ -14,4 +14,4 @@ seedDatabase()
   // Log any errors that occur during seeding
   .catch(error => console.log('Error during seeding: ', error))
   // Ensure the database connection is closed regardless of success or failure
-  .finally(() => AppDataSource.destroy());
+  .finally(() => AppDataSource.destroy())
