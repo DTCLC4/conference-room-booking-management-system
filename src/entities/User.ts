@@ -11,7 +11,7 @@ export class User {
   id: string
 
   // Unique constraint ensures that each username is distinct in the system
-  @Column({ unique: true })
+  @Column()
   // The user's chosen username
   username: string
 
@@ -26,7 +26,7 @@ export class User {
   email: string
 
   // Default value is true indicates whether the user account is active
-  @Column({ default: true })
+  @Column({ default: false })
    // If the user account is active.
   isActive: boolean
 
@@ -34,6 +34,12 @@ export class User {
   @Column({ nullable: true })
    // Last login timestamp.
   lastLogin: Date
+
+  @Column({ default: false })
+  isVerified: boolean
+
+  @Column({ nullable: true })
+  profileImage: string
 
   // Defines a Many-to-Many relationship with the Role entity
   @ManyToMany(() => Role, (role) => role.users)
