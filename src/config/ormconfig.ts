@@ -31,7 +31,7 @@ const config: DataSourceOptions = {
   logging: true,
 
   // Specify the location of entity files for TypeORM
-  entities: ['src/entity/*.ts'],
+  entities: ['src/entities/*.ts'],
 
   // Specify the location of migration files
   migrations: ['src/db/migrations/*.ts'],
