@@ -5,11 +5,11 @@ import { Role } from './Role'
 @Entity()
 export class Permission {
 
-   // Automatically generates a UUID as the primary key for each record
+  // Automatically generates a UUID as the primary key for each record
   @PrimaryGeneratedColumn('uuid')
   id: string
 
-   // Creates a unique column to store permission actions (e.g., "READ_USER", "CREATE_POST")
+  // Creates a unique column to store permission actions (e.g., "READ_USER", "CREATE_POST")
   @Column({ unique: true })
   // A string representing a specific permission action
   action: string
@@ -23,7 +23,7 @@ export class Permission {
   @CreateDateColumn()
   createdAt: Date
 
-   // Automatically updates the timestamp when the permission record is modified
+  // Automatically updates the timestamp when the permission record is modified
   @UpdateDateColumn()
   updatedAt: Date
 }

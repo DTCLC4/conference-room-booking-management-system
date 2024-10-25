@@ -15,7 +15,7 @@ export class Role {
   // The name of the role, which must be unique in the system
   name: string
 
-   // Defines a Many-to-Many relationship with the User entity
+  // Defines a Many-to-Many relationship with the User entity
   @ManyToMany(() => User, (user) => user.roles)
   // A role can be assigned to multiple users, and a user can have multiple roles
   users: User[]
@@ -31,7 +31,7 @@ export class Role {
   @CreateDateColumn()
   createdAt: Date
 
-   // Automatically updates the timestamp when a role record is modified
+  // Automatically updates the timestamp when a role record is modified
   @UpdateDateColumn()
   updatedAt: Date
 }
