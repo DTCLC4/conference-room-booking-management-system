@@ -16,7 +16,7 @@ export class EmailService {
   })
 
   async sendVerificationEmail(to: string, token: string) {
-    const verificationUrl = `http://localhost:3000/verify-email?token=${token}`
+    const verificationUrl = `http://localhost:3000/api/auth/verify-email?token=${token}`
 
     await this.transporter.sendMail({
       from: `"BookingApp" <${process.env.EMAIL_USER}>`,

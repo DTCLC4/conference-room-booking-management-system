@@ -35,11 +35,16 @@ export class AuthService {
     newUser.profileImage = getGravatarImage(email)
     newUser.verificationToken = verificationToken
 
-    const userRole = await roleRepository.findOneBy({ name: 'user' })
+    // Find the role with the name 'user' using the findByName method
+    const userRole = await roleRepository.findByName('user')
+
+    // If the 'user' role is not found, throw an error
     if (!userRole) {
       throw new Error('Default "user" role not found')
     }
 
+    // Assign the 'user' role to the new user's roles array
+    // A user can have multiple roles, so assign 'userRole' in an array
     newUser.roles = [userRole]
 
     // 4. Save the new user to the database
