@@ -1,0 +1,25 @@
+# Node modules
+node_modules
+npm-debug.log
+yarn-error.log
+
+# TypeScript output
+dist
+build
+
+# Environment files
+.env
+
+# Logs
+logs
+*.log
+
+# Docker files
+Dockerfile
+docker-compose.yml
+
+# IDE and Editor files
+.vscode
+.idea
+*.swp
+*~
